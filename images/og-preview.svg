@@ -1,0 +1,33 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Open Graph Preview Image -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E293B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="150" cy="150" r="80" fill="#0EA5E9" opacity="0.1"/>
+  <circle cx="1050" cy="480" r="100" fill="#22C55E" opacity="0.1"/>
+  <circle cx="900" cy="150" r="60" fill="#0EA5E9" opacity="0.15"/>
+  
+  <!-- Logo/Monogram -->
+  <rect x="80" y="80" width="120" height="120" rx="16" fill="#0EA5E9" opacity="0.2"/>
+  <text x="140" y="165" font-family="'Space Grotesk', Arial, sans-serif" font-size="64" font-weight="700" fill="#0EA5E9" text-anchor="middle">PP</text>
+  
+  <!-- Main text -->
+  <text x="80" y="310" font-family="'Space Grotesk', Arial, sans-serif" font-size="64" font-weight="700" fill="#F8FAFC">Patrick Passos</text>
+  <text x="80" y="380" font-family="'Inter', Arial, sans-serif" font-size="32" fill="#CBD5E1">Building science-driven technology</text>
+  
+  <!-- Subtitle -->
+  <text x="80" y="470" font-family="'Inter', Arial, sans-serif" font-size="24" fill="#94A3B8">Entrepreneur • Developer • Science Enthusiast</text>
+  
+  <!-- Bottom accent line -->
+  <rect x="80" y="520" width="200" height="6" rx="3" fill="#0EA5E9"/>
+  <rect x="290" y="520" width="80" height="6" rx="3" fill="#22C55E"/>
+</svg>
+
