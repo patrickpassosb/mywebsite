@@ -634,6 +634,26 @@ a:focus {
     transition: transform 0.3s var(--transition-smooth);
 }
 
+/* Special styling for logo images that need contain instead of cover */
+.project-image img[src*="solia-logo"] {
+    object-fit: contain;
+    padding: var(--spacing-xl);
+    background: white;
+}
+
+.project-image img[src*="earth"] {
+    object-fit: cover;
+    padding: 0;
+}
+
+.project-card:hover .project-image img[src*="solia-logo"] {
+    transform: scale(1.02);
+}
+
+.project-card:hover .project-image img[src*="earth"] {
+    transform: scale(1.05);
+}
+
 .project-card:hover .project-image img {
     transform: scale(1.05);
 }
