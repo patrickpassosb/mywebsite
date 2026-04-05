@@ -171,7 +171,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </section>
@@ -261,10 +261,10 @@ export default function Home() {
             Always open to discussing agentic systems, infrastructure challenges, or ambitious technical collaborations.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-            <a href="mailto:your_email@example.com" className="bg-primary text-on-primary px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-primary-container transition-all">
+            <a href="mailto:patrickpassosb@gmail.com" className="bg-primary text-on-primary px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-primary-container transition-all">
               Email Me directly
             </a>
-            <a href="https://t.me/patrickpassos" target="_blank" className="border border-outline-variant px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-surface-container-low transition-all">
+            <a href="https://t.me/patrickpassos" target="_blank" rel="noopener noreferrer" className="border border-outline-variant px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-surface-container-low transition-all">
               Telegram
             </a>
           </div>

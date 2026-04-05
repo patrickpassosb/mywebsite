@@ -48,10 +48,10 @@ export default function RootLayout({
             
             <div className="hidden md:flex items-center space-x-6">
                  {/* Social links in navbar */}
-                <a href="https://github.com/patrickpassosb" target="_blank" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">GitHub</a>
-                <a href="#" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">LinkedIn</a>
-                <a href="#" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">X</a>
-                <a href="#" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">YouTube</a>
+                <a href="https://github.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/patrickpassosb/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">LinkedIn</a>
+                <a href="https://x.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">X</a>
+                <a href="https://www.youtube.com/@patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">YouTube</a>
             </div>
           </div>
         </nav>
@@ -70,10 +70,10 @@ export default function RootLayout({
               © {new Date().getFullYear()} Patrick Passos. Built for systems thinking.
             </div>
             <div className="flex gap-8">
-              <a href="#" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">Twitter</a>
-              <a href="https://github.com/patrickpassosb" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">GitHub</a>
-              <a href="#" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">LinkedIn</a>
-              <a href="#" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">YouTube</a>
+              <a href="https://x.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">X</a>
+              <a href="https://github.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">GitHub</a>
+              <a href="https://www.linkedin.com/in/patrickpassosb/" target="_blank" rel="noopener noreferrer" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">LinkedIn</a>
+              <a href="https://www.youtube.com/@patrickpassosb" target="_blank" rel="noopener noreferrer" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">YouTube</a>
             </div>
           </div>
         </footer>
