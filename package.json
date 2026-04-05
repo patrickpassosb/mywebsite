@@ -1,13 +1,27 @@
 {
-  "name": "mywebsite",
+  "name": "patrickpassos-website",
   "version": "1.0.0",
-  "description": "Personal website with live reload development server",
+  "private": true,
   "scripts": {
-    "dev": "live-server --port=3000 --open=/index.html --watch=.",
-    "start": "live-server --port=3000 --open=/index.html --watch=."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "next-mdx-remote": "^4.4.1",
+    "lucide-react": "^0.344.0"
   },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "latest"
   }
 }
-

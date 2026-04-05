@@ -1,83 +1,35 @@
-# Patrick Passos — Personal Website
+# Patrick Passos - Builder OS 
 
-This is my personal website deployed on [GitHub Pages](https://patrickpassosb.github.io/mywebsite/). It showcases who I am, what I've built, my journey, and my goals as an entrepreneur building science-driven technology.
+The personal digital infrastructure for Patrick Passos. Designed as a serious, long-term platform for a technical builder focused on ambitious technology and deterministic systems.
 
-## About This Website
+## Purpose
+This repository serves as a personal website and portfolio. It rejects the generic "startup landing page" aesthetic in favor of a credible, highly intentional "Laboratory Editorial" look.
 
-My website includes:
+## Technologies Used
+- Next.js
+- Tailwind CSS
+- TypeScript
 
-- **About Me** — My background, interests, and focus areas in science, technology, and entrepreneurship
-- **My Journey** — Key moments that shaped my path, from self-taught English to building impactful tech
-- **Projects** — Things I've built, including:
-  - **Solia** — AI-powered early skin cancer screening platform (SBOC Code4Cancer Hackathon)
-  - **Biome** — AI fitness coach developed for Google Cloud Run Hackathon
-- **Social Media** — Links to connect with me on Instagram, X (Twitter), YouTube, GitHub, and LinkedIn
+## Local Development
+Since the preferred environment is **bun**:
 
-## 🚀 Development
+1. Ensure Bun is installed on your system.
+2. Install dependencies:
+   ```bash
+   bun install
+   ```
+3. Run the development server:
+   ```bash
+   bun run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000)
 
-### Running Locally
+## Customization TODO List
+The site has been populated with high-fidelity UI but uses generic placeholders so you can safely inject your exact data without fake achievements. Please update:
 
-1. Install dependencies:
-```bash
-npm install
-```
-
-2. Start the development server:
-```bash
-npm run dev
-```
-
-The website will open automatically in your browser at `http://localhost:3000` with live reload enabled. Any changes to your files will automatically refresh the page.
-
-## 📁 Project Structure
-
-```
-mywebsite/
-├── index.html          # Main HTML file
-├── styles.css          # All styles and theme variables
-├── script.js           # Interactive functionality
-├── package.json        # Development dependencies
-├── robots.txt          # Search engine instructions
-├── sitemap.xml         # Site structure for SEO
-└── images/             # All images
-    ├── favicon.svg
-    ├── biome.jpg
-    ├── solia-logo.png
-    └── ...
-```
-
-## ✨ Features
-
-- Responsive design (mobile-first)
-- Dark/light theme toggle
-- Smooth scrolling navigation
-- Accessibility compliant (WCAG 2.1 AA)
-- Fast loading (< 100KB)
-- SEO optimized
-
-## 🎨 Customization
-
-### Colors
-
-Edit CSS variables in `styles.css`:
-
-```css
-:root {
-    --color-primary: #0EA5E9;
-    --color-primary-dark: #0284C7;
-    --color-bg: #FFFFFF;
-    --color-text: #0F172A;
-}
-```
-
-### Content
-
-Update the content directly in `index.html`:
-- Personal information and bio
-- Project cards in the projects section
-- Social media links
-- Navigation menu items
-
----
-
-Built with vanilla HTML, CSS, and JavaScript.
+- [ ] `src/app/page.tsx`: Swap "Project Alpha" and "Project Beta" with real case studies.
+- [ ] `src/app/page.tsx`: Update the "What I'm building now" bento grid. 
+- [ ] `src/app/layout.tsx`: Enter correct links for GitHub, LinkedIn, X, and YouTube in the Navbar and Footer.
+- [ ] `src/app/page.tsx`: Modify the `mailto:` email block at the bottom to use your actual email address.
+- [ ] `src/app/journey/page.tsx`: Expand on your personal journey with specific metadata and dates.
+- [ ] Implement Markdown/MDX parser of your choice for rendering `.mdx` files dynamically when your essays are ready.
