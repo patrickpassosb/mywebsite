@@ -103,48 +103,48 @@ export default function Home() {
                   <div className="absolute inset-0 bg-primary/5"></div>
                 </div>
               </div>
-              <div className="md:col-span-5 md:pl-12">
-                <span className="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Engine: TBD</span>
-                <h3 className="font-serif text-4xl mb-6">Project Alpha</h3>
+              <div className="md:col-span-12 md:pl-12">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Architecture: EVM/Monad</span>
+                <h3 className="font-serif text-4xl mb-6">Builder Passport</h3>
                 <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
-                  Placeholder text for your future project description. A distributed compute network designed specifically for hosting autonomous agents at the edge.
+                  A portable on-chain record of hackathon participation, contribution, and achievements. It enables builders to establish a unified identity, receive official awards, and facilitate peer attestation on the Monad network.
                 </p>
                 <div className="font-mono text-[11px] uppercase tracking-widest space-y-2 mb-10 text-on-surface">
                   <div className="flex justify-between border-b border-surface-container py-2">
                     <span className="text-outline">Stack</span>
-                    <span>Stack / TBD</span>
+                    <span>Solidity / Next.js / Wagmi</span>
                   </div>
                   <div className="flex justify-between border-b border-surface-container py-2">
                     <span className="text-outline">Status</span>
-                    <span>Stable</span>
+                    <span>Active</span>
                   </div>
                 </div>
-                <a href="/projects/alpha" className="inline-flex items-center font-mono text-xs uppercase tracking-[0.2em] text-primary group">
-                  View Case Study <span className="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">north_east</span>
+                <a href="https://github.com/patrickpassosb/builder-passport" target="_blank" rel="noopener noreferrer" className="inline-flex items-center font-mono text-xs uppercase tracking-[0.2em] text-primary group">
+                  View Repository <span className="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">north_east</span>
                 </a>
               </div>
             </div>
 
             {/* Generic Project Placeholder 02 */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-              <div className="md:col-span-5 order-2 md:order-1 md:pr-12">
-                <span className="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Architecture: TBD</span>
-                <h3 className="font-serif text-4xl mb-6">Project Beta</h3>
+              <div className="md:col-span-12 order-2 md:order-1 md:pr-12">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Architecture: Logic Composer</span>
+                <h3 className="font-serif text-4xl mb-6">Kraken DaD</h3>
                 <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
-                  Placeholder text for your second project description. A visual programming environment for designing complex logic chains in AI systems.
+                  A Kraken-native low-code strategy builder. Allows traders to visually compose logic routines, execute them safely in a rigorous dry-run environment, and optionally deploy them for live algorithmic trading.
                 </p>
                 <div className="font-mono text-[11px] uppercase tracking-widest space-y-2 mb-10 text-on-surface">
                   <div className="flex justify-between border-b border-surface-container py-2">
                     <span className="text-outline">Stack</span>
-                    <span>Stack / TBD</span>
+                    <span>React Flow / Fastify / TS</span>
                   </div>
                   <div className="flex justify-between border-b border-surface-container py-2">
                     <span className="text-outline">Status</span>
-                    <span>Beta Testing</span>
+                    <span>Active</span>
                   </div>
                 </div>
-                <a href="/projects/beta" className="inline-flex items-center font-mono text-xs uppercase tracking-[0.2em] text-primary group">
-                  View Case Study <span className="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">north_east</span>
+                <a href="https://github.com/patrickpassosb/Kraken-DaD" target="_blank" rel="noopener noreferrer" className="inline-flex items-center font-mono text-xs uppercase tracking-[0.2em] text-primary group">
+                  View Repository <span className="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform">north_east</span>
                 </a>
               </div>
               <div className="md:col-span-7 order-1 md:order-2">
