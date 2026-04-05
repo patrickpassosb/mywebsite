@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "lucide-react": "^0.344.0",
     "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
+    "next-intl": "^4.9.0",
     "next-mdx-remote": "^4.4.1",
-    "lucide-react": "^0.344.0"
+    "react": "latest",
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",

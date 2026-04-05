@@ -1,26 +1,30 @@
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations('Index');
+
   return (
     <>
       {/* Hero Section */}
       <section className="max-w-screen-2xl mx-auto px-8 pt-32 pb-48">
         <div className="max-w-4xl">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6 block">
-            Software Engineer & Builder
+            {t('title')}
           </span>
           <h1 className="font-serif italic text-6xl md:text-8xl leading-tight text-on-surface mb-8">
             Patrick Passos
           </h1>
           <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">
-            Looking to advance the frontier of science and technology. I have studied AI, science, and technology to build systems that scale.
+            {t('description')}
           </p>
           <div className="flex flex-wrap gap-6">
-            <Link href="/projects" className="bg-primary text-on-primary px-10 py-4 font-mono text-sm uppercase tracking-widest hover:bg-primary-container transition-all">
-              Projects
+            <Link href={`/${locale}/projects`} className="bg-primary text-on-primary px-10 py-4 font-mono text-sm uppercase tracking-widest hover:bg-primary-container transition-all">
+              {t('projects')}
             </Link>
-            <Link href="/journey" className="border border-outline-variant px-10 py-4 font-mono text-sm uppercase tracking-widest text-on-surface hover:bg-surface-container-low transition-all">
-              Journey
+            <Link href={`/${locale}/journey`} className="border border-outline-variant px-10 py-4 font-mono text-sm uppercase tracking-widest text-on-surface hover:bg-surface-container-low transition-all">
+              {t('journey')}
             </Link>
           </div>
         </div>
@@ -91,19 +95,20 @@ export default function Home() {
           </div>
 
           <div className="space-y-48">
-            {/* Generic Project Placeholder 01 */}
+            {/* Builder Passport */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
               <div className="md:col-span-7">
-                <div className="relative overflow-hidden aspect-video bg-surface-container">
+                <div className="relative overflow-hidden aspect-video bg-surface-container border border-surface-container">
+                  {/* PLEASE REPLACE THIS SRC WITH THE ACTUAL BUILDER PASSPORT SCREENSHOT */}
                   <img
-                    alt="Project Placeholder"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_W7-wUREfB_nbr8LMaIPtoa6yVG6BbOjkaTiFq4L2Q2KW_YmUrKK2yWHCo-W7J93QlsJCNhNGlGFehPgt-R6iwduolC74YwgZkjx78LUBdgPCh3HOydEzIoWAG3Hdc9UdOVhDWd2qbh3Jjmv5uqoehaay20Aa6590xAoWNkSmmrrIQqhGtGpGIFgTVizjKrTiPR70K98jIsQ0YOWXgZx6PiWW7cjFCacZ05wGn33gItVynKHbNm5jS-C71uA97dkCs3kMy5sFcLU"
+                    alt="Builder Passport Dashboard"
+                    src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2832&auto=format&fit=crop"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-primary/5"></div>
                 </div>
               </div>
-              <div className="md:col-span-12 md:pl-12">
+              <div className="md:col-span-5 md:pl-12">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Architecture: EVM/Monad</span>
                 <h3 className="font-serif text-4xl mb-6">Builder Passport</h3>
                 <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
@@ -125,9 +130,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Generic Project Placeholder 02 */}
+            {/* Kraken DaD */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-              <div className="md:col-span-12 order-2 md:order-1 md:pr-12">
+              <div className="md:col-span-5 order-2 md:order-1 md:pr-12">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Architecture: Logic Composer</span>
                 <h3 className="font-serif text-4xl mb-6">Kraken DaD</h3>
                 <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
@@ -148,10 +153,11 @@ export default function Home() {
                 </a>
               </div>
               <div className="md:col-span-7 order-1 md:order-2">
-                <div className="relative overflow-hidden aspect-video bg-surface-container">
+                <div className="relative overflow-hidden aspect-video bg-surface-container border border-surface-container">
+                  {/* PLEASE REPLACE THIS SRC WITH THE ACTUAL KRAKEN DAD SCREENSHOT */}
                   <img
-                    alt="Project Placeholder"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXGY8kPtYon7HLQR_sMTBTk7sEVmtzYPtTmensMVY-E0VYZoNkEsDPOJxLVi2tC89qe-_5qVsyUPGckNcDnMPzoYu1DXl3DDoBORnLWLoIou63AFuOK7ARzg91e_6HR2lwjg_zRCsSSmn_LosojKdfWmLH1A-QaoOT-B5qEv_EqsHYlejfynxWjO29u3SumRamyiFjH0YlQkDcQwJ4DHfu_ZkCOhCRfDSMmhjrnA84UYl-s5NkYjGIFgCURpGmTM8SeUyfU5e0Qts"
+                    alt="Kraken DaD Interface"
+                    src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2930&auto=format&fit=crop"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-primary/5"></div>
@@ -194,7 +200,7 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto">
           <div className="flex justify-between items-baseline mb-16">
             <h2 className="font-serif italic text-4xl">Journey Preview</h2>
-            <Link href="/journey" className="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary">View Full Log</Link>
+            <Link href={`/${locale}/journey`} className="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary">View Full Log</Link>
           </div>
           <div className="border-t border-surface-container">
             <div className="grid grid-cols-12 py-8 border-b border-surface-container group hover:bg-surface-container-low transition-colors px-4">
@@ -220,17 +226,17 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto">
           <div className="flex justify-between items-baseline mb-16">
             <h2 className="font-serif italic text-4xl">Writing &amp; Notes</h2>
-            <Link href="/writing" className="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary">
+            <Link href={`/${locale}/writing`} className="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary">
               View All Content
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
-            <Link href="/writing/placeholder-1" className="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500">
+            <Link href={`/${locale}/writing/placeholder-1`} className="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500">
               <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-primary-fixed">TBD</span>
               <h4 className="font-serif text-xl leading-snug">The Case for Deterministic Engineering</h4>
               <span className="material-symbols-outlined text-right group-hover:translate-x-2 transition-transform">arrow_forward</span>
             </Link>
-            <Link href="/writing/placeholder-2" className="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500">
+            <Link href={`/${locale}/writing/placeholder-2`} className="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500">
               <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-primary-fixed">TBD</span>
               <h4 className="font-serif text-xl leading-snug">Systems Thinking</h4>
               <span className="material-symbols-outlined text-right group-hover:translate-x-2 transition-transform">arrow_forward</span>

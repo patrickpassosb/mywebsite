@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Serif, Space_Grotesk } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Link from 'next/link';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, getTranslations } from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSerif = Noto_Serif({ subsets: ["latin"], variable: "--font-noto-serif" });
@@ -12,13 +14,19 @@ export const metadata: Metadata = {
   description: "Architecting agentic systems & ambitious digital structures.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{locale: string}>;
 }>) {
+  const { locale } = await params;
+  const messages = await getMessages();
+  const t = await getTranslations('Navigation');
+
   return (
-    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang={locale} className="scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
         <style dangerouslySetInnerHTML={{__html: `
@@ -26,23 +34,24 @@ export default function RootLayout({
         `}} />
       </head>
       <body className={`${inter.variable} ${notoSerif.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+        <NextIntlClientProvider messages={messages}>
         {/* TopNavBar */}
         <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-surface-container">
           <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-            <Link href="/">
+            <Link href={`/${locale}`}>
                 <div className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 font-serif">
                 Patrick Passos
                 </div>
             </Link>
             <div className="hidden md:flex items-center space-x-12">
-              <Link href="/projects" className="text-zinc-900 dark:text-zinc-50 border-b-2 border-transparent hover:border-[#0058bc] pb-1 font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo">
-                Projects
+              <Link href={`/${locale}/projects`} className="text-zinc-900 dark:text-zinc-50 border-b-2 border-transparent hover:border-[#0058bc] pb-1 font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo">
+                {t('projects')}
               </Link>
-              <Link href="/journey" className="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo">
-                Journey
+              <Link href={`/${locale}/journey`} className="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo">
+                {t('journey')}
               </Link>
-              <Link href="/writing" className="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo">
-                Writing
+              <Link href={`/${locale}/writing`} className="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo">
+                {t('writing')}
               </Link>
             </div>
             
@@ -52,6 +61,11 @@ export default function RootLayout({
                 <a href="https://www.linkedin.com/in/patrickpassosb/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">LinkedIn</a>
                 <a href="https://x.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">X</a>
                 <a href="https://www.youtube.com/@patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">YouTube</a>
+                
+                {/* Language Switcher */}
+                <Link href={`/${locale === 'en' ? 'pt' : 'en'}`} className="ml-4 font-mono text-[10px] uppercase tracking-widest border border-outline px-2 py-1 hover:border-primary hover:text-primary transition-all">
+                  {t('switch_locale')}
+                </Link>
             </div>
           </div>
         </nav>
@@ -77,6 +91,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

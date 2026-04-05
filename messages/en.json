@@ -1,0 +1,18 @@
+{
+  "Navigation": {
+    "projects": "Projects",
+    "journey": "Journey",
+    "writing": "Writing",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "x": "X",
+    "youtube": "YouTube",
+    "switch_locale": "PT"
+  },
+  "Index": {
+    "title": "Software Engineer & Builder",
+    "description": "Looking to advance the frontier of science and technology. I have studied AI, science, and technology to build systems that scale.",
+    "projects": "Projects",
+    "journey": "Journey"
+  }
+}

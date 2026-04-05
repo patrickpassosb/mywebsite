@@ -1,0 +1,18 @@
+{
+  "Navigation": {
+    "projects": "Projetos",
+    "journey": "Jornada",
+    "writing": "Textos",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "x": "X",
+    "youtube": "YouTube",
+    "switch_locale": "EN"
+  },
+  "Index": {
+    "title": "Engenheiro de Software & Builder",
+    "description": "Buscando avançar as fronteiras da ciência e da tecnologia. Estudei Inteligência Artificial, ciência e tecnologia para construir ambientes tecnológicos escaláveis.",
+    "projects": "Projetos",
+    "journey": "Jornada"
+  }
+}
