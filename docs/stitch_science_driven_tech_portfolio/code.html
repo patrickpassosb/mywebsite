@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Patrick Passos | Builder OS</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#00696f",
+                    "outline-variant": "#c1c6d7",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-container": "#fefcff",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "outline": "#717786",
+                    "on-secondary-fixed": "#002022",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-container-high": "#e8e8e8",
+                    "inverse-on-surface": "#f0f1f1",
+                    "tertiary": "#9e3d00",
+                    "primary": "#0058bc",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "primary-container": "#0070eb",
+                    "on-surface-variant": "#414755",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "background": "#f9f9f9",
+                    "on-background": "#1a1c1c",
+                    "inverse-primary": "#adc6ff",
+                    "surface-dim": "#dadada",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#351000",
+                    "inverse-surface": "#2f3131",
+                    "surface": "#f9f9f9",
+                    "surface-tint": "#005bc1",
+                    "primary-fixed-dim": "#adc6ff",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#ffdbcc",
+                    "tertiary-container": "#c64f00",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#74f5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#fffbff",
+                    "on-primary-fixed": "#001a41",
+                    "surface-variant": "#e2e2e2",
+                    "on-surface": "#1a1c1c",
+                    "secondary-container": "#00f1fe",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-container": "#006a70",
+                    "secondary-fixed-dim": "#00dbe7",
+                    "on-tertiary-fixed-variant": "#7c2e00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; }
+      .font-serif { font-family: 'Noto Serif', serif; }
+      .font-mono { font-family: 'Space Grotesk', monospace; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+      .glass-panel { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(24px); }
+      .technical-grid { background-size: 40px 40px; background-image: linear-gradient(to right, #e5e5e5 0.5px, transparent 0.5px), linear-gradient(to bottom, #e5e5e5 0.5px, transparent 0.5px); }
+      .transition-all { transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      .ease-out-expo { transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+<div class="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 font-serif">
+            Patrick Passos
+        </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-zinc-900 dark:text-zinc-50 border-b-2 border-[#0058bc] pb-1 font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo" href="#projects">Projects</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo" href="#systems">Systems</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo" href="#journey">Journey</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo" href="#writing">Writing</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-mono text-xs uppercase tracking-widest hover:bg-primary-container transition-all ease-out-expo duration-300 scale-95 active:scale-90">
+            Connect
+        </button>
+</div>
+</nav>
+<main class="technical-grid min-h-screen pt-20">
+<!-- Hero Section -->
+<section class="max-w-screen-2xl mx-auto px-8 pt-32 pb-48">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-9">
+<span class="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6 block">Building high-impact technical systems</span>
+<h1 class="font-serif italic text-6xl md:text-8xl leading-tight text-on-surface mb-8">
+                    Architecting agentic <br/>systems &amp; ambitious <br/>digital structures.
+                </h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">
+                    Patrick Passos is a builder and systems thinker focused on the intersection of deterministic engineering and autonomous agency. 
+                </p>
+<div class="flex flex-wrap gap-6">
+<a class="bg-primary text-on-primary px-10 py-4 font-mono text-sm uppercase tracking-widest hover:bg-primary-container transition-all" href="#projects">Projects</a>
+<a class="border border-outline-variant px-10 py-4 font-mono text-sm uppercase tracking-widest text-on-surface hover:bg-surface-container-low transition-all" href="#journey">Journey</a>
+</div>
+</div>
+<div class="hidden md:block md:col-span-3 text-right">
+<div class="font-mono text-[10px] uppercase text-outline leading-loose tracking-widest">
+                    EST. 2024<br/>
+                    OS_BUILD: 1.0.4<br/>
+                    LAT: 40.7128° N<br/>
+                    LNG: 74.0060° W
+                </div>
+</div>
+</div>
+</section>
+<!-- What I'm Building Now (Bento Grid) -->
+<section class="bg-surface-container-low py-32 px-8" id="systems">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-20">
+<h2 class="font-serif italic text-4xl text-on-surface">What I’m Building Now</h2>
+<span class="font-mono text-xs uppercase tracking-widest text-outline mt-4 md:mt-0">ACTIVE_PROCESSES [03]</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<div class="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:bg-white transition-colors duration-500">
+<div>
+<span class="font-mono text-secondary text-sm mb-8 block">01</span>
+<h3 class="font-serif text-2xl mb-4">Autonomous Infrastructure</h3>
+<p class="text-on-surface-variant leading-relaxed">Developing self-healing cloud environments using large action models to minimize operational latency.</p>
+</div>
+<div class="mt-12 flex items-center text-primary font-mono text-xs uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                        View Status <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:bg-white transition-colors duration-500">
+<div>
+<span class="font-mono text-secondary text-sm mb-8 block">02</span>
+<h3 class="font-serif text-2xl mb-4">Deterministic Agents</h3>
+<p class="text-on-surface-variant leading-relaxed">A framework for LLM orchestration that guarantees verifiable output paths through symbolic logic constraints.</p>
+</div>
+<div class="mt-12 flex items-center text-primary font-mono text-xs uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                        View Status <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:bg-white transition-colors duration-500">
+<div>
+<span class="font-mono text-secondary text-sm mb-8 block">03</span>
+<h3 class="font-serif text-2xl mb-4">Modular OS</h3>
+<p class="text-on-surface-variant leading-relaxed">Redefining the personal workspace as a composable set of technical primitives for deep work and high output.</p>
+</div>
+<div class="mt-12 flex items-center text-primary font-mono text-xs uppercase tracking-widest group-hover:translate-x-2 transition-transform">
+                        View Status <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Selected Projects -->
+<section class="py-32 px-8" id="projects">
+<div class="max-w-screen-2xl mx-auto">
+<div class="mb-24">
+<h2 class="font-serif italic text-5xl mb-6">Selected Projects</h2>
+<div class="h-px w-32 bg-primary"></div>
+</div>
+<div class="space-y-48">
+<!-- Project 01 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7">
+<div class="relative overflow-hidden aspect-video bg-surface-container">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Technical data visualization interface with blue glowing neon lines and complex geometric patterns on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_W7-wUREfB_nbr8LMaIPtoa6yVG6BbOjkaTiFq4L2Q2KW_YmUrKK2yWHCo-W7J93QlsJCNhNGlGFehPgt-R6iwduolC74YwgZkjx78LUBdgPCh3HOydEzIoWAG3Hdc9UdOVhDWd2qbh3Jjmv5uqoehaay20Aa6590xAoWNkSmmrrIQqhGtGpGIFgTVizjKrTiPR70K98jIsQ0YOWXgZx6PiWW7cjFCacZ05wGn33gItVynKHbNm5jS-C71uA97dkCs3kMy5sFcLU"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+</div>
+<div class="md:col-span-5 md:pl-12">
+<span class="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Engine: Scalable Agency</span>
+<h3 class="font-serif text-4xl mb-6">Project_Synthetix</h3>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
+                            Synthetix is a distributed compute network designed specifically for hosting autonomous agents at the edge. It minimizes cold starts to &lt; 10ms through predictive pre-warming.
+                        </p>
+<div class="font-mono text-[11px] uppercase tracking-widest space-y-2 mb-10 text-on-surface">
+<div class="flex justify-between border-b border-surface-container py-2">
+<span class="text-outline">Stack</span>
+<span>Rust / WASM / Kubernetes</span>
+</div>
+<div class="flex justify-between border-b border-surface-container py-2">
+<span class="text-outline">Status</span>
+<span>v2.1 Stable</span>
+</div>
+</div>
+<a class="inline-flex items-center font-mono text-xs uppercase tracking-[0.2em] text-primary group" href="#">
+                            Access Repository <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<!-- Project 02 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 order-2 md:order-1 md:pr-12">
+<span class="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Engine: Determinism by Design</span>
+<h3 class="font-serif text-4xl mb-6">Lumen_Flow</h3>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
+                            A visual programming environment for designing complex logic chains in AI systems. lumen_flow ensures that every decision path is mapped and auditable before execution.
+                        </p>
+<div class="font-mono text-[11px] uppercase tracking-widest space-y-2 mb-10 text-on-surface">
+<div class="flex justify-between border-b border-surface-container py-2">
+<span class="text-outline">Stack</span>
+<span>TypeScript / React / Canvas API</span>
+</div>
+<div class="flex justify-between border-b border-surface-container py-2">
+<span class="text-outline">Status</span>
+<span>Beta Testing</span>
+</div>
+</div>
+<a class="inline-flex items-center font-mono text-xs uppercase tracking-[0.2em] text-primary group" href="#">
+                            Access Repository <span class="material-symbols-outlined ml-2 text-sm group-hover:translate-x-1 transition-transform" data-icon="north_east">north_east</span>
+</a>
+</div>
+<div class="md:col-span-7 order-1 md:order-2">
+<div class="relative overflow-hidden aspect-video bg-surface-container">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Microchip circuit board close-up with soft cinematic lighting and shallow depth of field, silver and copper accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXGY8kPtYon7HLQR_sMTBTk7sEVmtzYPtTmensMVY-E0VYZoNkEsDPOJxLVi2tC89qe-_5qVsyUPGckNcDnMPzoYu1DXl3DDoBORnLWLoIou63AFuOK7ARzg91e_6HR2lwjg_zRCsSSmn_LosojKdfWmLH1A-QaoOT-B5qEv_EqsHYlejfynxWjO29u3SumRamyiFjH0YlQkDcQwJ4DHfu_ZkCOhCRfDSMmhjrnA84UYl-s5NkYjGIFgCURpGmTM8SeUyfU5e0Qts"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- How I Build (Engineering Principles) -->
+<section class="bg-[#1a1c1c] text-[#f9f9f9] py-32 px-8">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+<div class="md:col-span-4">
+<h2 class="font-serif italic text-5xl mb-8">Building <br/>Philosophy</h2>
+<p class="font-mono text-xs uppercase tracking-[0.3em] text-[#717786]">Core engineering principles</p>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div>
+<h4 class="font-serif text-xl mb-6 text-secondary-container">Deterministic Systems</h4>
+<p class="text-[#c1c6d7] leading-relaxed">Complexity should never breed unpredictability. I build systems where the outcome is a mathematical certainty, not a statistical probability.</p>
+</div>
+<div>
+<h4 class="font-serif text-xl mb-6 text-secondary-container">Minimalist Engineering</h4>
+<p class="text-[#c1c6d7] leading-relaxed">Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away from the codebase.</p>
+</div>
+<div>
+<h4 class="font-serif text-xl mb-6 text-secondary-container">Agency as a Partner</h4>
+<p class="text-[#c1c6d7] leading-relaxed">AI isn't a replacement for the builder, but a high-fidelity partner that extends our cognitive reach across vast technical surfaces.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Journey -->
+<section class="py-32 px-8 bg-surface" id="journey">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex justify-between items-baseline mb-16">
+<h2 class="font-serif italic text-4xl">Journey</h2>
+<span class="font-mono text-xs uppercase tracking-widest text-outline">MILESTONES_LOG</span>
+</div>
+<div class="border-t border-surface-container">
+<div class="grid grid-cols-12 py-8 border-b border-surface-container group hover:bg-surface-container-low transition-colors px-4">
+<div class="col-span-2 font-mono text-xs text-outline pt-1">2024 — PRESENT</div>
+<div class="col-span-4 font-serif text-xl">Founder &amp; Lead Engineer</div>
+<div class="col-span-6 font-body text-on-surface-variant leading-relaxed">Synthetix Labs. Leading development of autonomous edge infrastructure for the next generation of AI agents.</div>
+</div>
+<div class="grid grid-cols-12 py-8 border-b border-surface-container group hover:bg-surface-container-low transition-colors px-4">
+<div class="col-span-2 font-mono text-xs text-outline pt-1">2022 — 2023</div>
+<div class="col-span-4 font-serif text-xl">Systems Architect</div>
+<div class="col-span-6 font-body text-on-surface-variant leading-relaxed">Optimized low-latency trading pipelines and designed high-throughput distributed databases for fintech clients.</div>
+</div>
+<div class="grid grid-cols-12 py-8 border-b border-surface-container group hover:bg-surface-container-low transition-colors px-4">
+<div class="col-span-2 font-mono text-xs text-outline pt-1">2020 — 2022</div>
+<div class="col-span-4 font-serif text-xl">Full Stack Engineer</div>
+<div class="col-span-6 font-body text-on-surface-variant leading-relaxed">Built and scaled consumer-facing applications, focusing on developer experience and CI/CD automation.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Highlights -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<h3 class="font-serif italic text-3xl mb-12">Technical Highlights</h3>
+<ul class="space-y-8">
+<li class="flex items-start">
+<span class="font-mono text-xs text-primary mr-6 mt-1">01</span>
+<div>
+<h5 class="font-mono text-sm uppercase tracking-widest font-bold mb-2">Hackathon Champion</h5>
+<p class="text-on-surface-variant text-sm">Winner of the 2023 Global AI Systems Hackathon for "Agent_Zero" project.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="font-mono text-xs text-primary mr-6 mt-1">02</span>
+<div>
+<h5 class="font-mono text-sm uppercase tracking-widest font-bold mb-2">Open Source Core Contributor</h5>
+<p class="text-on-surface-variant text-sm">Major contributions to several high-profile Rust and WASM runtime projects.</p>
+</div>
+</li>
+<li class="flex items-start">
+<span class="font-mono text-xs text-primary mr-6 mt-1">03</span>
+<div>
+<h5 class="font-mono text-sm uppercase tracking-widest font-bold mb-2">1M+ Monthly Active Requests</h5>
+<p class="text-on-surface-variant text-sm">Successfully architected infrastructure handling massive global scale without downtime.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative group">
+<div class="aspect-square bg-surface overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:scale-105" data-alt="Industrial machine control panel with glowing indicators and knobs in a clean, high-tech manufacturing environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKPRIYK3xFmF0DobNhpkbmi0luyliqWmDOuGn_iEXh61OzNq56Vi7QZ5rIt6Uwc0CT07TOxrf-0fMMU1mSA3CsBP9ru11gNv0kRBFlMmo50iCR3stUirpG4sLS9IbR58Nfoh6Ll8MbAsbNvTZd8QruFptcGNvrsx3lhY6FW0FWeBLpiAtkaAyZnaUctgaKOuZkjRNyez0Dov9VycI64cvaP8u8tFzW30MgpgZu6HDd0-EY3V85LfnwmG-FuQzxtoHKgXhAzquOWUs"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-primary text-on-primary p-8 md:p-12">
+<p class="font-serif text-xl italic leading-relaxed">"Patrick builds with the precision of a watchmaker and the vision of an architect."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Writing / Notes -->
+<section class="py-32 px-8" id="writing">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex justify-between items-baseline mb-16">
+<h2 class="font-serif italic text-4xl">Writing &amp; Notes</h2>
+<a class="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary" href="#">View All Essays</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+<a class="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500" href="#">
+<span class="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-primary-fixed">March 2024</span>
+<h4 class="font-serif text-xl leading-snug">The Case for Deterministic AI Agents</h4>
+<span class="material-symbols-outlined text-right group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500" href="#">
+<span class="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-primary-fixed">Feb 2024</span>
+<h4 class="font-serif text-xl leading-snug">Rust vs C++: A Systems Perspective</h4>
+<span class="material-symbols-outlined text-right group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500" href="#">
+<span class="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-primary-fixed">Jan 2024</span>
+<h4 class="font-serif text-xl leading-snug">The Future of Edge Computing</h4>
+<span class="material-symbols-outlined text-right group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500" href="#">
+<span class="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-primary-fixed">Dec 2023</span>
+<h4 class="font-serif text-xl leading-snug">Architecting for 99.999% Availability</h4>
+<span class="material-symbols-outlined text-right group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-surface py-48 px-8 border-t border-surface-container">
+<div class="max-w-screen-md mx-auto text-center">
+<span class="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-8 block">Ready to Build?</span>
+<h2 class="font-serif italic text-6xl md:text-7xl mb-12">Let’s connect.</h2>
+<p class="text-on-surface-variant text-lg mb-16 leading-relaxed">
+                Always open to discussing agentic systems, infrastructure challenges, or ambitious technical collaborations.
+            </p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-8">
+<a class="bg-primary text-on-primary px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-primary-container transition-all" href="mailto:patrick@builder.os">patrick@builder.os</a>
+<a class="border border-outline-variant px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-surface-container-low transition-all" href="#">Schedule Call</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-[#f3f3f3] dark:bg-zinc-900 border-t border-zinc-200/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-screen-2xl mx-auto">
+<div class="font-serif italic text-zinc-900 dark:text-zinc-100 text-lg mb-4 md:mb-0">
+            Patrick Passos
+        </div>
+<div class="text-xs font-mono tracking-widest uppercase text-[#717786] dark:text-zinc-400 mb-6 md:mb-0">
+            © Patrick Passos. Built for systems thinking.
+        </div>
+<div class="flex gap-8">
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100" href="#">RSS</a>
+</div>
+</div>
+</footer>
+</body></html>
