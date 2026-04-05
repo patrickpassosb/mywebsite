@@ -5,36 +5,23 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="max-w-screen-2xl mx-auto px-8 pt-32 pb-48">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-          <div className="md:col-span-9">
-            <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6 block">
-              Building high-impact technical systems
-            </span>
-            <h1 className="font-serif italic text-6xl md:text-8xl leading-tight text-on-surface mb-8">
-              Architecting agentic <br />
-              systems &amp; ambitious <br />
-              digital structures.
-            </h1>
-            <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">
-              Patrick Passos is a builder and systems thinker focused on the intersection of
-              deterministic engineering and autonomous agency.
-            </p>
-            <div className="flex flex-wrap gap-6">
-              <Link href="/projects" className="bg-primary text-on-primary px-10 py-4 font-mono text-sm uppercase tracking-widest hover:bg-primary-container transition-all">
-                Projects
-              </Link>
-              <Link href="/journey" className="border border-outline-variant px-10 py-4 font-mono text-sm uppercase tracking-widest text-on-surface hover:bg-surface-container-low transition-all">
-                Journey
-              </Link>
-            </div>
-          </div>
-          <div className="hidden md:block md:col-span-3 text-right">
-            <div className="font-mono text-[10px] uppercase text-outline leading-loose tracking-widest">
-              EST. 2024<br />
-              OS_BUILD: 1.0.4<br />
-              LAT: 40.7128° N<br />
-              LNG: 74.0060° W
-            </div>
+        <div className="max-w-4xl">
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6 block">
+            Software Engineer & Builder
+          </span>
+          <h1 className="font-serif italic text-6xl md:text-8xl leading-tight text-on-surface mb-8">
+            Patrick Passos
+          </h1>
+          <p className="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">
+            Looking to advance the frontier of science and technology. I have studied AI, science, and technology to build systems that scale.
+          </p>
+          <div className="flex flex-wrap gap-6">
+            <Link href="/projects" className="bg-primary text-on-primary px-10 py-4 font-mono text-sm uppercase tracking-widest hover:bg-primary-container transition-all">
+              Projects
+            </Link>
+            <Link href="/journey" className="border border-outline-variant px-10 py-4 font-mono text-sm uppercase tracking-widest text-on-surface hover:bg-surface-container-low transition-all">
+              Journey
+            </Link>
           </div>
         </div>
       </section>
