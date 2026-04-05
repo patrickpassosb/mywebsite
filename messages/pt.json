@@ -13,6 +13,78 @@
     "title": "Engenheiro de Software & Builder",
     "description": "Buscando avançar as fronteiras da ciência e da tecnologia. Estudei Inteligência Artificial, ciência e tecnologia para construir ambientes tecnológicos escaláveis.",
     "projects": "Projetos",
-    "journey": "Jornada"
+    "journey": "Jornada",
+    "building_now": {
+      "title": "O que estou construindo agora",
+      "status_label": "PROCESSOS_ATIVOS",
+      "project1": {
+        "title": "Infraestrutura Autônoma",
+        "description": "Desenvolvendo ambientes que se auto-recuperam utilizando grandes modelos de ação para minimizar a latência operacional.",
+        "link": "Ver Status"
+      },
+      "project2": {
+        "title": "Agentes Determinísticos",
+        "description": "Um framework para orquestração de LLMs que garante caminhos de saída verificáveis através de restrições de lógica simbólica.",
+        "link": "Ver Status"
+      },
+      "project3": {
+        "title": "Modular OS",
+        "description": "Redefinindo o espaço de trabalho pessoal como um conjunto de primitivas técnicas combináveis para trabalho focado e alta produtividade.",
+        "link": "Ver Status"
+      }
+    },
+    "selected_projects": {
+      "title": "Projetos Selecionados",
+      "view_repo": "Ver Repositório",
+      "project1": {
+        "description": "Um registro on-chain portátil de participação em hackathons, contribuições e conquistas. Permite que desenvolvedores estabeleçam uma identidade unificada, recebam prêmios oficiais e facilitem a atestação entre pares na rede Monad."
+      },
+      "project2": {
+        "description": "Um construtor de estratégias low-code nativo do ecossistema Kraken. Permite que traders componham visualmente rotinas de lógica, as executem de forma segura em um ambiente de simulação rigoroso e as implantem opcionalmente para negociação algorítmica ao vivo."
+      }
+    },
+    "philosophy": {
+      "title": "Filosofia de Construção",
+      "subtitle": "Princípios fundamentais de engenharia",
+      "principle1": {
+        "title": "Sistemas Determinísticos",
+        "description": "A complexidade nunca deve gerar imprevisibilidade. Eu construo sistemas onde o resultado é uma certeza física, não uma probabilidade estatística."
+      },
+      "principle2": {
+        "title": "Engenharia Minimalista",
+        "description": "A perfeição é alcançada não quando não há mais nada a adicionar, mas sim quando não há nada sobrando que possa ser removido do código."
+      },
+      "principle3": {
+        "title": "Agência como Parceira",
+        "description": "IA não é um substituto para o desenvolvedor, mas um parceiro de alta fidelidade que amplia nosso alcance cognitivo em vastas superfícies técnicas."
+      }
+    },
+    "journey_preview": {
+      "title": "Prévia da Jornada",
+      "link": "Ver Log Completo",
+      "item1": {
+        "label": "ATUAL",
+        "title": "Engenheiro de Software & Builder",
+        "description": "Focado em tecnologias ambiciosas e no desenvolvimento de aplicações altamente determinísticas."
+      },
+      "item2": {
+        "label": "HACKATHON",
+        "title": "Projeto de Hackathon Global",
+        "description": "Construí e desenvolvi projetos de alto impacto sob restrições de tempo rigorosas."
+      }
+    },
+    "writing": {
+      "title": "Textos & Notas",
+      "link": "Ver todo conteúdo",
+      "post1": "O Caso da Engenharia Determinística",
+      "post2": "Pensamento Sistêmico"
+    },
+    "contact": {
+      "label": "Pronto para Construir?",
+      "title": "Vamos conectar.",
+      "description": "Sempre aberto para discutir sistemas agenticos, desafios de infraestrutura ou colaborações técnicas ambiciosas.",
+      "email_button": "E-mail Direto",
+      "telegram_button": "Telegram"
+    }
   }
 }

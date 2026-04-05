@@ -4,6 +4,8 @@ import "../globals.css";
 import Link from 'next/link';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
+import { ThemeProvider } from '@/components/ThemeProvider';
+import SettingsMenu from '@/components/SettingsMenu';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSerif = Noto_Serif({ subsets: ["latin"], variable: "--font-noto-serif" });
@@ -33,10 +35,11 @@ export default async function RootLayout({
             .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
         `}} />
       </head>
-      <body className={`${inter.variable} ${notoSerif.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${notoSerif.variable} ${spaceGrotesk.variable} bg-surface dark:bg-zinc-950 text-on-surface dark:text-zinc-50 transition-colors duration-300`} suppressHydrationWarning>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <NextIntlClientProvider messages={messages}>
         {/* TopNavBar */}
-        <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-surface-container">
+        <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-surface-container dark:border-zinc-800">
           <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
             <Link href={`/${locale}`}>
                 <div className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 font-serif">
@@ -63,9 +66,7 @@ export default async function RootLayout({
                 <a href="https://www.youtube.com/@patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">YouTube</a>
                 
                 {/* Language Switcher */}
-                <Link href={`/${locale === 'en' ? 'pt' : 'en'}`} className="ml-4 font-mono text-[10px] uppercase tracking-widest border border-outline px-2 py-1 hover:border-primary hover:text-primary transition-all">
-                  {t('switch_locale')}
-                </Link>
+                <SettingsMenu currentLocale={locale} />
             </div>
           </div>
         </nav>
@@ -75,7 +76,7 @@ export default async function RootLayout({
         </main>
 
         {/* Footer */}
-        <footer className="w-full py-12 bg-[#f3f3f3] dark:bg-zinc-900 border-t border-zinc-200/10">
+        <footer className="w-full py-12 bg-[#f3f3f3] dark:bg-zinc-900 border-t border-zinc-200/10 dark:border-zinc-800/30">
           <div className="grid grid-cols-1 md:grid-cols-3 items-center px-8 max-w-screen-2xl mx-auto gap-6 md:gap-0">
             <div className="font-serif italic text-zinc-900 dark:text-zinc-100 text-lg text-center md:text-left">
               Patrick Passos
@@ -92,6 +93,7 @@ export default async function RootLayout({
           </div>
         </footer>
         </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
