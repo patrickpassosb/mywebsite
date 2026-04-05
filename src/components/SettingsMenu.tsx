@@ -32,50 +32,54 @@ export default function SettingsMenu({ currentLocale }: { currentLocale: string 
     <div className="relative ml-4" ref={menuRef}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex items-center justify-center border border-outline px-2 py-1 transition-all duration-300 ${isOpen ? 'border-primary text-primary bg-primary/10' : 'hover:border-primary hover:text-primary'}`}
+        className={`flex items-center justify-center border border-outline px-2 py-1 transition-all duration-300 ${isOpen ? 'border-primary text-primary bg-primary/10' : 'hover:border-primary hover:text-primary text-on-surface-variant'}`}
         aria-label="Settings Menu"
       >
-        <span className="material-symbols-outlined text-[20px] leading-none">more_horiz</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="19" cy="12" r="1" />
+            <circle cx="5" cy="12" r="1" />
+        </svg>
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-surface dark:bg-zinc-950 border border-outline-variant shadow-2xl z-50 p-2 ring-1 ring-black/5 dark:ring-white/10">
+        <div className="absolute right-0 mt-3 w-52 bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 shadow-2xl z-50 p-2 ring-1 ring-black/5 dark:ring-white/10 rounded-sm">
           
           {/* THEME SETTINGS */}
           <div className="mb-2">
-            <span className="block font-mono text-[9px] uppercase tracking-widest text-outline mb-1 px-2">Theme</span>
+            <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2 px-2">Theme</span>
             <div className="space-y-1">
               <button 
                 onClick={() => { setTheme("light"); setIsOpen(false); }}
-                className={`w-full text-left px-2 py-1.5 font-mono text-xs uppercase tracking-widest transition-colors ${mounted && theme === 'light' ? 'bg-primary text-on-primary font-bold' : 'text-on-surface hover:bg-surface-container-low dark:hover:bg-zinc-900'}`}
+                className={`w-full text-left px-3 py-2 font-mono text-[11px] uppercase tracking-widest transition-all ${mounted && theme === 'light' ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800'}`}
               >
                 Light
               </button>
               <button 
                 onClick={() => { setTheme("dark"); setIsOpen(false); }}
-                className={`w-full text-left px-2 py-1.5 font-mono text-xs uppercase tracking-widest transition-colors ${mounted && theme === 'dark' ? 'bg-primary text-on-primary font-bold' : 'text-on-surface hover:bg-surface-container-low dark:hover:bg-zinc-900'}`}
+                className={`w-full text-left px-3 py-2 font-mono text-[11px] uppercase tracking-widest transition-all ${mounted && theme === 'dark' ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800'}`}
               >
                 Dark
               </button>
               <button 
                 onClick={() => { setTheme("system"); setIsOpen(false); }}
-                className={`w-full text-left px-2 py-1.5 font-mono text-xs uppercase tracking-widest transition-colors ${mounted && theme === 'system' ? 'bg-primary text-on-primary font-bold' : 'text-on-surface hover:bg-surface-container-low dark:hover:bg-zinc-900'}`}
+                className={`w-full text-left px-3 py-2 font-mono text-[11px] uppercase tracking-widest transition-all ${mounted && theme === 'system' ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800'}`}
               >
                 System
               </button>
             </div>
           </div>
 
-          <div className="h-px bg-outline-variant/30 my-2"></div>
+          <div className="h-px bg-zinc-200 dark:bg-zinc-800 my-2 mx-1"></div>
 
           {/* LANGUAGE SETTINGS */}
           <div>
-            <span className="block font-mono text-[9px] uppercase tracking-widest text-outline mb-1 px-2">Language</span>
+            <span className="block font-mono text-[10px] uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-500 mb-2 px-2">Language</span>
             <div className="space-y-1">
               <Link 
                 href={currentLocale === 'en' ? pathname : newLocalePath}
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center space-x-2 w-full px-2 py-1.5 font-mono text-xs uppercase tracking-widest transition-colors ${currentLocale === 'en' ? 'bg-primary text-on-primary font-bold' : 'text-on-surface hover:bg-surface-container-low dark:hover:bg-zinc-900'}`}
+                className={`flex items-center space-x-3 w-full px-3 py-2 font-mono text-[11px] uppercase tracking-widest transition-all ${currentLocale === 'en' ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800'}`}
               >
                 <span className="text-sm">🇺🇸</span>
                 <span>English</span>
@@ -83,14 +87,13 @@ export default function SettingsMenu({ currentLocale }: { currentLocale: string 
               <Link 
                 href={currentLocale === 'pt' ? pathname : newLocalePath}
                 onClick={() => setIsOpen(false)}
-                className={`flex items-center space-x-2 w-full px-2 py-1.5 font-mono text-xs uppercase tracking-widest transition-colors ${currentLocale === 'pt' ? 'bg-primary text-on-primary font-bold' : 'text-on-surface hover:bg-surface-container-low dark:hover:bg-zinc-900'}`}
+                className={`flex items-center space-x-3 w-full px-3 py-2 font-mono text-[11px] uppercase tracking-widest transition-all ${currentLocale === 'pt' ? 'bg-primary text-on-primary font-bold shadow-sm' : 'text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-900 border border-transparent hover:border-zinc-200 dark:hover:border-zinc-800'}`}
               >
                 <span className="text-sm">🇧🇷</span>
                 <span>Português</span>
               </Link>
             </div>
           </div>
-          
         </div>
       )}
     </div>
