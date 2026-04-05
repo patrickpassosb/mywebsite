@@ -62,14 +62,14 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="w-full py-12 bg-[#f3f3f3] dark:bg-zinc-900 border-t border-zinc-200/10">
-          <div className="flex flex-col md:flex-row justify-between items-center px-8 max-w-screen-2xl mx-auto">
-            <div className="font-serif italic text-zinc-900 dark:text-zinc-100 text-lg mb-4 md:mb-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 items-center px-8 max-w-screen-2xl mx-auto gap-6 md:gap-0">
+            <div className="font-serif italic text-zinc-900 dark:text-zinc-100 text-lg text-center md:text-left">
               Patrick Passos
             </div>
-            <div className="text-xs font-mono tracking-widest uppercase text-[#717786] dark:text-zinc-400 mb-6 md:mb-0">
-              © {new Date().getFullYear()} Patrick Passos. Built for systems thinking.
+            <div className="text-xs font-mono tracking-widest uppercase text-[#717786] dark:text-zinc-400 text-center">
+              © {new Date().getFullYear()} Patrick Passos.
             </div>
-            <div className="flex gap-8">
+            <div className="flex justify-center md:justify-end gap-8">
               <a href="https://x.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">X</a>
               <a href="https://github.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">GitHub</a>
               <a href="https://www.linkedin.com/in/patrickpassosb/" target="_blank" rel="noopener noreferrer" className="text-xs font-mono tracking-widest uppercase text-zinc-400 dark:text-zinc-500 hover:text-[#0058bc] dark:hover:text-[#0070eb] hover:underline decoration-[#0058bc] underline-offset-4 transition-all opacity-80 hover:opacity-100">LinkedIn</a>
