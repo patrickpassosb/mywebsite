@@ -30,16 +30,13 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-        <style dangerouslySetInnerHTML={{__html: `
-            .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        `}} />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=more_horiz,more_vert,settings" />
       </head>
-      <body className={`${inter.variable} ${notoSerif.variable} ${spaceGrotesk.variable} bg-surface dark:bg-zinc-950 text-on-surface dark:text-zinc-50 transition-colors duration-300`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${notoSerif.variable} ${spaceGrotesk.variable} transition-colors duration-300`} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         <NextIntlClientProvider messages={messages}>
         {/* TopNavBar */}
-        <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-b border-surface-container dark:border-zinc-800">
+        <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-black/60 backdrop-blur-xl border-b border-surface-container dark:border-white/10">
           <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
             <Link href={`/${locale}`}>
                 <div className="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 font-serif">
@@ -60,10 +57,10 @@ export default async function RootLayout({
             
             <div className="hidden md:flex items-center space-x-6">
                  {/* Social links in navbar */}
-                <a href="https://github.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">GitHub</a>
-                <a href="https://www.linkedin.com/in/patrickpassosb/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">LinkedIn</a>
-                <a href="https://x.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">X</a>
-                <a href="https://www.youtube.com/@patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors">YouTube</a>
+                <a href="https://github.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">GitHub</a>
+                <a href="https://www.linkedin.com/in/patrickpassosb/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">LinkedIn</a>
+                <a href="https://x.com/patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">X</a>
+                <a href="https://www.youtube.com/@patrickpassosb" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">YouTube</a>
                 
                 {/* Language Switcher */}
                 <SettingsMenu currentLocale={locale} />

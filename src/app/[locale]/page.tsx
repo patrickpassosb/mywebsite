@@ -23,7 +23,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <Link href={`/${locale}/projects`} className="bg-primary text-on-primary px-10 py-4 font-mono text-sm uppercase tracking-widest hover:bg-primary-container transition-all">
               {t('projects')}
             </Link>
-            <Link href={`/${locale}/journey`} className="border border-outline-variant px-10 py-4 font-mono text-sm uppercase tracking-widest text-on-surface hover:bg-surface-container-low transition-all">
+            <Link href={`/${locale}/journey`} className="border border-outline-variant px-10 py-4 font-mono text-sm uppercase tracking-widest text-on-surface hover:bg-surface-container transition-all">
               {t('journey')}
             </Link>
           </div>
@@ -40,12 +40,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 bg-surface-container">
             {/* Box 1 */}
-            <div className="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:bg-white transition-colors duration-500">
+            <div className="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:brightness-105 transition-all duration-500">
               <div>
                 <span className="font-mono text-secondary text-sm mb-8 block">01</span>
-                <h3 className="font-serif text-2xl mb-4">{t('building_now.project1.title')}</h3>
+                <h3 className="font-serif text-2xl mb-4 text-on-surface">{t('building_now.project1.title')}</h3>
                 <p className="text-on-surface-variant leading-relaxed">
                   {t('building_now.project1.description')}
                 </p>
@@ -56,10 +56,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </div>
 
             {/* Box 2 */}
-            <div className="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:bg-white transition-colors duration-500">
+            <div className="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:brightness-105 transition-all duration-500">
               <div>
                 <span className="font-mono text-secondary text-sm mb-8 block">02</span>
-                <h3 className="font-serif text-2xl mb-4">{t('building_now.project2.title')}</h3>
+                <h3 className="font-serif text-2xl mb-4 text-on-surface">{t('building_now.project2.title')}</h3>
                 <p className="text-on-surface-variant leading-relaxed">
                   {t('building_now.project2.description')}
                 </p>
@@ -70,10 +70,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </div>
 
             {/* Box 3 */}
-            <div className="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:bg-white transition-colors duration-500">
+            <div className="bg-surface-container-lowest p-12 flex flex-col justify-between group hover:brightness-105 transition-all duration-500">
               <div>
                 <span className="font-mono text-secondary text-sm mb-8 block">03</span>
-                <h3 className="font-serif text-2xl mb-4">{t('building_now.project3.title')}</h3>
+                <h3 className="font-serif text-2xl mb-4 text-on-surface">{t('building_now.project3.title')}</h3>
                 <p className="text-on-surface-variant leading-relaxed">
                   {t('building_now.project3.description')}
                 </p>
@@ -87,10 +87,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* Selected Projects */}
-      <section className="py-32 px-8" id="projects">
+      <section className="py-32 px-8 bg-surface" id="projects">
         <div className="max-w-screen-2xl mx-auto">
           <div className="mb-24">
-            <h2 className="font-serif italic text-5xl mb-6">{t('selected_projects.title')}</h2>
+            <h2 className="font-serif italic text-5xl mb-6 text-on-surface">{t('selected_projects.title')}</h2>
             <div className="h-px w-32 bg-primary"></div>
           </div>
 
@@ -98,30 +98,29 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {/* Builder Passport */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
               <div className="md:col-span-7">
-                <div className="relative overflow-hidden aspect-video bg-surface-container border border-surface-container">
-                  {/* PLEASE REPLACE THIS SRC WITH THE ACTUAL BUILDER PASSPORT SCREENSHOT */}
+                <div className="relative overflow-hidden aspect-video bg-surface-container border border-outline-variant/20">
                   <img
                     alt="Builder Passport Dashboard"
                     src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2832&auto=format&fit=crop"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-primary/5"></div>
+                  <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
                 </div>
               </div>
               <div className="md:col-span-5 md:pl-12">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Architecture: EVM/Monad</span>
-                <h3 className="font-serif text-4xl mb-6">Builder Passport</h3>
+                <h3 className="font-serif text-4xl mb-6 text-on-surface">Builder Passport</h3>
                 <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
                   {t('selected_projects.project1.description')}
                 </p>
                 <div className="font-mono text-[11px] uppercase tracking-widest space-y-2 mb-10 text-on-surface">
-                  <div className="flex justify-between border-b border-surface-container py-2">
+                  <div className="flex justify-between border-b border-outline-variant/20 py-2">
                     <span className="text-outline">Stack</span>
                     <span>Solidity / Next.js / Wagmi</span>
                   </div>
-                  <div className="flex justify-between border-b border-surface-container py-2">
+                  <div className="flex justify-between border-b border-outline-variant/20 py-2">
                     <span className="text-outline">Status</span>
-                    <span>Active</span>
+                    <span className="text-secondary">Active</span>
                   </div>
                 </div>
                 <a href="https://github.com/patrickpassosb/builder-passport" target="_blank" rel="noopener noreferrer" className="inline-flex items-center font-mono text-xs uppercase tracking-[0.2em] text-primary group">
@@ -134,18 +133,18 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
               <div className="md:col-span-5 order-2 md:order-1 md:pr-12">
                 <span className="font-mono text-xs uppercase tracking-[0.2em] text-outline mb-4 block">Architecture: Logic Composer</span>
-                <h3 className="font-serif text-4xl mb-6">Kraken DaD</h3>
+                <h3 className="font-serif text-4xl mb-6 text-on-surface">Kraken DaD</h3>
                 <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
                   {t('selected_projects.project2.description')}
                 </p>
                 <div className="font-mono text-[11px] uppercase tracking-widest space-y-2 mb-10 text-on-surface">
-                  <div className="flex justify-between border-b border-surface-container py-2">
+                  <div className="flex justify-between border-b border-outline-variant/20 py-2">
                     <span className="text-outline">Stack</span>
                     <span>React Flow / Fastify / TS</span>
                   </div>
-                  <div className="flex justify-between border-b border-surface-container py-2">
+                  <div className="flex justify-between border-b border-outline-variant/20 py-2">
                     <span className="text-outline">Status</span>
-                    <span>Active</span>
+                    <span className="text-secondary">Active</span>
                   </div>
                 </div>
                 <a href="https://github.com/patrickpassosb/Kraken-DaD" target="_blank" rel="noopener noreferrer" className="inline-flex items-center font-mono text-xs uppercase tracking-[0.2em] text-primary group">
@@ -153,14 +152,13 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                 </a>
               </div>
               <div className="md:col-span-7 order-1 md:order-2">
-                <div className="relative overflow-hidden aspect-video bg-surface-container border border-surface-container">
-                  {/* PLEASE REPLACE THIS SRC WITH THE ACTUAL KRAKEN DAD SCREENSHOT */}
+                <div className="relative overflow-hidden aspect-video bg-surface-container border border-outline-variant/20">
                   <img
                     alt="Kraken DaD Interface"
                     src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=2930&auto=format&fit=crop"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                   />
-                  <div className="absolute inset-0 bg-primary/5"></div>
+                  <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
                 </div>
               </div>
             </div>
@@ -170,7 +168,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* How I Build (Engineering Principles) */}
-      <section className="bg-[#1a1c1c] text-[#f9f9f9] py-32 px-8">
+      <section className="bg-on-surface text-surface py-32 px-8">
         <div className="max-w-screen-2xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
             <div className="md:col-span-4">
@@ -181,20 +179,20 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
                   <>Filosofia de <br /> Construção</>
                 )}
               </h2>
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-[#717786]">{t('philosophy.subtitle')}</p>
+              <p className="font-mono text-xs uppercase tracking-[0.3em] text-outline-variant opacity-60">{t('philosophy.subtitle')}</p>
             </div>
             <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-12">
               <div>
-                <h4 className="font-serif text-xl mb-6 text-secondary-container">{t('philosophy.principle1.title')}</h4>
-                <p className="text-[#c1c6d7] leading-relaxed">{t('philosophy.principle1.description')}</p>
+                <h4 className="font-serif text-xl mb-6 text-primary">{t('philosophy.principle1.title')}</h4>
+                <p className="text-surface-container-highest leading-relaxed">{t('philosophy.principle1.description')}</p>
               </div>
               <div>
-                <h4 className="font-serif text-xl mb-6 text-secondary-container">{t('philosophy.principle2.title')}</h4>
-                <p className="text-[#c1c6d7] leading-relaxed">{t('philosophy.principle2.description')}</p>
+                <h4 className="font-serif text-xl mb-6 text-primary">{t('philosophy.principle2.title')}</h4>
+                <p className="text-surface-container-highest leading-relaxed">{t('philosophy.principle2.description')}</p>
               </div>
               <div>
-                <h4 className="font-serif text-xl mb-6 text-secondary-container">{t('philosophy.principle3.title')}</h4>
-                <p className="text-[#c1c6d7] leading-relaxed">{t('philosophy.principle3.description')}</p>
+                <h4 className="font-serif text-xl mb-6 text-primary">{t('philosophy.principle3.title')}</h4>
+                <p className="text-surface-container-highest leading-relaxed">{t('philosophy.principle3.description')}</p>
               </div>
             </div>
           </div>
@@ -205,20 +203,20 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <section className="py-32 px-8 bg-surface">
         <div className="max-w-screen-2xl mx-auto">
           <div className="flex justify-between items-baseline mb-16">
-            <h2 className="font-serif italic text-4xl">{t('journey_preview.title')}</h2>
+            <h2 className="font-serif italic text-4xl text-on-surface">{t('journey_preview.title')}</h2>
             <Link href={`/${locale}/journey`} className="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary">{t('journey_preview.link')}</Link>
           </div>
-          <div className="border-t border-surface-container">
-            <div className="grid grid-cols-12 py-8 border-b border-surface-container group hover:bg-surface-container-low transition-colors px-4">
+          <div className="border-t border-outline-variant/20">
+            <div className="grid grid-cols-12 py-8 border-b border-outline-variant/20 group hover:bg-surface-container-low transition-colors px-4">
                 <div className="col-span-12 md:col-span-2 font-mono text-xs text-outline pt-1">{t('journey_preview.item1.label')}</div>
-                <div className="col-span-12 md:col-span-4 font-serif text-xl mt-2 md:mt-0">{t('journey_preview.item1.title')}</div>
+                <div className="col-span-12 md:col-span-4 font-serif text-xl mt-2 md:mt-0 text-on-surface">{t('journey_preview.item1.title')}</div>
                 <div className="col-span-12 md:col-span-6 font-body text-on-surface-variant leading-relaxed mt-2 md:mt-0">
                   {t('journey_preview.item1.description')}
                 </div>
             </div>
-            <div className="grid grid-cols-12 py-8 border-b border-surface-container group hover:bg-surface-container-low transition-colors px-4">
+            <div className="grid grid-cols-12 py-8 border-b border-outline-variant/20 group hover:bg-surface-container-low transition-colors px-4">
                 <div className="col-span-12 md:col-span-2 font-mono text-xs text-outline pt-1">{t('journey_preview.item2.label')}</div>
-                <div className="col-span-12 md:col-span-4 font-serif text-xl mt-2 md:mt-0">{t('journey_preview.item2.title')}</div>
+                <div className="col-span-12 md:col-span-4 font-serif text-xl mt-2 md:mt-0 text-on-surface">{t('journey_preview.item2.title')}</div>
                 <div className="col-span-12 md:col-span-6 font-body text-on-surface-variant leading-relaxed mt-2 md:mt-0">
                   {t('journey_preview.item2.description')}
                 </div>
@@ -228,34 +226,34 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </section>
 
       {/* Writing / Notes Preview */}
-      <section className="py-32 px-8" id="writing">
+      <section className="py-32 px-8 bg-surface-container-low" id="writing">
         <div className="max-w-screen-2xl mx-auto">
           <div className="flex justify-between items-baseline mb-16">
-            <h2 className="font-serif italic text-4xl">{t('writing.title')}</h2>
+            <h2 className="font-serif italic text-4xl text-on-surface">{t('writing.title')}</h2>
             <Link href={`/${locale}/writing`} className="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary">
               {t('writing.link')}
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-1">
-            <Link href={`/${locale}/writing/placeholder-1`} className="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500">
-              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-primary-fixed">TBD</span>
-              <h4 className="font-serif text-xl leading-snug">{t('writing.post1')}</h4>
-              <span className="material-symbols-outlined text-right group-hover:translate-x-2 transition-transform">arrow_forward</span>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-1 bg-surface-container">
+            <Link href={`/${locale}/writing/placeholder-1`} className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500">
+              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">TBD</span>
+              <h4 className="font-serif text-xl leading-snug text-on-surface group-hover:text-on-primary">{t('writing.post1')}</h4>
+              <span className="material-symbols-outlined text-right text-primary group-hover:text-on-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
             </Link>
-            <Link href={`/${locale}/writing/placeholder-2`} className="bg-surface-container p-8 h-80 flex flex-col justify-between hover:bg-primary hover:text-on-primary transition-all group duration-500">
-              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-primary-fixed">TBD</span>
-              <h4 className="font-serif text-xl leading-snug">{t('writing.post2')}</h4>
-              <span className="material-symbols-outlined text-right group-hover:translate-x-2 transition-transform">arrow_forward</span>
+            <Link href={`/${locale}/writing/placeholder-2`} className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500">
+              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">TBD</span>
+              <h4 className="font-serif text-xl leading-snug text-on-surface group-hover:text-on-primary">{t('writing.post2')}</h4>
+              <span className="material-symbols-outlined text-right text-primary group-hover:text-on-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="bg-surface py-48 px-8 border-t border-surface-container" id="contact">
+      <section className="bg-surface py-48 px-8 border-t border-outline-variant/20" id="contact">
         <div className="max-w-screen-md mx-auto text-center">
           <span className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-8 block">{t('contact.label')}</span>
-          <h2 className="font-serif italic text-6xl md:text-7xl mb-12">{t('contact.title')}</h2>
+          <h2 className="font-serif italic text-6xl md:text-7xl mb-12 text-on-surface">{t('contact.title')}</h2>
           <p className="text-on-surface-variant text-lg mb-16 leading-relaxed">
             {t('contact.description')}
           </p>
@@ -263,7 +261,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <a href="mailto:patrickpassosb@gmail.com" className="bg-primary text-on-primary px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-primary-container transition-all">
               {t('contact.email_button')}
             </a>
-            <a href="https://t.me/patrickpassos" target="_blank" rel="noopener noreferrer" className="border border-outline-variant px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-surface-container-low transition-all">
+            <a href="https://t.me/patrickpassos" target="_blank" rel="noopener noreferrer" className="border border-outline-variant px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto text-on-surface hover:bg-surface-container transition-all">
               {t('contact.telegram_button')}
             </a>
           </div>
