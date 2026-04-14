@@ -63,14 +63,14 @@
       "title": "Prévia da Jornada",
       "link": "Ver Log Completo",
       "item1": {
-        "label": "ATUAL",
-        "title": "Engenheiro de Software & Builder",
-        "description": "Focado em tecnologias ambiciosas e no desenvolvimento de aplicações altamente determinísticas."
+        "label": "20 ANOS · PRESENTE",
+        "title": "Hackathons & Construção",
+        "description": "Entregando em hackathons e construindo projetos como Builder Passport e Kraken DaD."
       },
       "item2": {
-        "label": "HACKATHON",
-        "title": "Projeto de Hackathon Global",
-        "description": "Construí e desenvolvi projetos de alto impacto sob restrições de tempo rigorosas."
+        "label": "12 ANOS",
+        "title": "Primeira Lógica & Jogos",
+        "description": "Primeiro curso de programação e os primeiros jogos — a faísca que definiu o rumo."
       }
     },
     "writing": {
@@ -85,6 +85,62 @@
       "description": "Sempre aberto para discutir sistemas agenticos, desafios de infraestrutura ou colaborações técnicas ambiciosas.",
       "email_button": "E-mail Direto",
       "telegram_button": "Telegram"
+    }
+  },
+  "Projects": {
+    "title": "Projetos",
+    "description": "Sistemas que construí e os repositórios por trás deles. Um diretório vivo, atualizado conforme eu entrego.",
+    "view_repo": "Ver Repositório",
+    "stack_label": "STACK",
+    "status_label": "STATUS",
+    "status_active": "ATIVO",
+    "builder_passport": {
+      "architecture": "ARQUITETURA: EVM / MONAD",
+      "name": "Builder Passport",
+      "description": "Um registro on-chain portátil de participação em hackathons, contribuições e conquistas. Permite que desenvolvedores estabeleçam uma identidade unificada, recebam prêmios oficiais e facilitem a atestação entre pares na rede Monad.",
+      "stack": "SOLIDITY / NEXT.JS / WAGMI"
+    },
+    "kraken_dad": {
+      "architecture": "ARQUITETURA: COMPOSITOR DE LÓGICA",
+      "name": "Kraken DaD",
+      "description": "Um construtor de estratégias low-code nativo do ecossistema Kraken. Permite que traders componham visualmente rotinas de lógica, as executem de forma segura em um ambiente de simulação rigoroso e as implantem opcionalmente para negociação algorítmica ao vivo.",
+      "stack": "REACT FLOW / FASTIFY / TS"
+    }
+  },
+  "Journey": {
+    "title": "Jornada",
+    "intro": "Sou o Patrick Passos — 20 anos, nascido e criado no Brasil. Esta página é a história real de como fui da minha primeira linha de código aos 12 anos até estar entregando em hackathons hoje, contada em ordem.",
+    "chapters": {
+      "age_12": {
+        "label": "12 ANOS",
+        "title": "Primeira Lógica & Jogos",
+        "description": "Entrei em um curso de programação focado em desenvolvimento de jogos e construí meus primeiros pequenos jogos. Ver uma ideia virar software funcional parecia mágica, e aquela resolução de problemas inicial definiu o rumo de tudo que veio depois."
+      },
+      "age_17": {
+        "label": "17 ANOS",
+        "title": "Escola Técnica",
+        "description": "Entrei numa escola técnica em informática para unir uma base real de computação ao ensino médio. O currículo era útil, mas aprendi rápido que engenheiros sérios precisam montar o próprio caminho de estudo."
+      },
+      "age_18": {
+        "label": "18 ANOS",
+        "title": "Imersão Total em Inglês",
+        "description": "Me comprometi com a fluência através da imersão total — troquei todos os dispositivos (celular, computador, TV) para inglês, lia constantemente e criei um canal no YouTube para praticar diante da câmera todo dia. O inglês deixou de ser matéria e virou a língua operacional da minha vida."
+      },
+      "age_19_canada": {
+        "label": "19 ANOS · CANADÁ",
+        "title": "Programa de Intercâmbio",
+        "description": "Fui para o Canadá em um programa de intercâmbio para colocar meu inglês sob pressão real e ampliar minha visão de mundo. Viver fora reconfigurou minha forma de pensar sobre trabalho, ambição e o que é de fato possível."
+      },
+      "age_19_sf": {
+        "label": "19 ANOS · SÃO FRANCISCO",
+        "title": "Vale do Silício",
+        "description": "Do Canadá, fui até São Francisco para pisar dentro da sala de máquinas da cena global de tecnologia. Estar perto de fundadores e builders da Bay Area me mostrou, de perto, o que o software consegue fazer quando é direcionado a problemas reais."
+      },
+      "age_20_present": {
+        "label": "20 ANOS · PRESENTE",
+        "title": "Hackathons & Construção",
+        "description": "De volta ao Brasil, fui direto para a cena de hackathons, começando pelo NASA Space Apps Challenge — o maior hackathon do mundo. De lá pra cá venho entregando em hackathons (Suno AI, Agents Hackathon e outros), construindo projetos como o Builder Passport e o Kraken DaD, e trabalhando rumo a software que resolva problemas reais com times talentosos."
+      }
     }
   }
 }

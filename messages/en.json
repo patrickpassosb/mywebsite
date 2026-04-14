@@ -63,14 +63,14 @@
       "title": "Journey Preview",
       "link": "View Full Log",
       "item1": {
-        "label": "PRESENT",
-        "title": "Software Engineer & Builder",
-        "description": "Focused on ambitious technology and writing highly deterministic applications."
+        "label": "AGE 20 · PRESENT",
+        "title": "Hackathons & Building",
+        "description": "Shipping at hackathons and building projects like Builder Passport and Kraken DaD."
       },
       "item2": {
-        "label": "HACKATHON",
-        "title": "Global Hackathon Project",
-        "description": "Built and developed high-impact projects under strict time constraints."
+        "label": "AGE 12",
+        "title": "First Logic & Games",
+        "description": "First programming course and my first games — the spark that set the direction."
       }
     },
     "writing": {
@@ -85,6 +85,62 @@
       "description": "Always open to discussing agentic systems, infrastructure challenges, or ambitious technical collaborations.",
       "email_button": "Email Me directly",
       "telegram_button": "Telegram"
+    }
+  },
+  "Projects": {
+    "title": "Projects",
+    "description": "Systems I've built and the repositories behind them. A living directory, updated as I ship.",
+    "view_repo": "View Repository",
+    "stack_label": "STACK",
+    "status_label": "STATUS",
+    "status_active": "ACTIVE",
+    "builder_passport": {
+      "architecture": "ARCHITECTURE: EVM / MONAD",
+      "name": "Builder Passport",
+      "description": "A portable on-chain record of hackathon participation, contribution, and achievements. It enables builders to establish a unified identity, receive official awards, and facilitate peer attestation on the Monad network.",
+      "stack": "SOLIDITY / NEXT.JS / WAGMI"
+    },
+    "kraken_dad": {
+      "architecture": "ARCHITECTURE: LOGIC COMPOSER",
+      "name": "Kraken DaD",
+      "description": "A Kraken-native low-code strategy builder. Allows traders to visually compose logic routines, execute them safely in a rigorous dry-run environment, and optionally deploy them for live algorithmic trading.",
+      "stack": "REACT FLOW / FASTIFY / TS"
+    }
+  },
+  "Journey": {
+    "title": "Journey",
+    "intro": "I'm Patrick Passos — 20 years old, born and raised in Brazil. This page is the real story of how I went from writing my first line of code at twelve to shipping at hackathons today, told in order.",
+    "chapters": {
+      "age_12": {
+        "label": "AGE 12",
+        "title": "First Logic & Games",
+        "description": "I enrolled in a programming course focused on game development and built my first small games. Seeing an idea turn into working software felt like magic, and that early problem-solving set the direction for everything that followed."
+      },
+      "age_17": {
+        "label": "AGE 17",
+        "title": "Technical High School",
+        "description": "I joined a technical high school specializing in informatics to pair a real computer science foundation with my secondary education. Coursework was useful, but I quickly learned that serious engineers have to build their own curriculum."
+      },
+      "age_18": {
+        "label": "AGE 18",
+        "title": "Full English Immersion",
+        "description": "I committed to fluency through total immersion — switching every device (phone, computer, TV) to English, reading constantly, and launching a YouTube channel to practice on camera every day. English stopped being a class and became the operating language of my life."
+      },
+      "age_19_canada": {
+        "label": "AGE 19 · CANADA",
+        "title": "Exchange Program",
+        "description": "I flew to Canada for an exchange program to put my English under real pressure and widen my lens on the world. Living abroad rewired how I think about work, ambition, and what's actually possible."
+      },
+      "age_19_sf": {
+        "label": "AGE 19 · SAN FRANCISCO",
+        "title": "Silicon Valley",
+        "description": "From Canada I made my way to San Francisco to stand inside the engine room of the global technology scene. Being close to founders and builders in the Bay showed me, up close, what software can do when it's pointed at real problems."
+      },
+      "age_20_present": {
+        "label": "AGE 20 · PRESENT",
+        "title": "Hackathons & Building",
+        "description": "Back in Brazil, I went straight into the hackathon scene, starting with the NASA Space Apps Challenge — the largest hackathon in the world. Since then I've been shipping at hackathons (Suno AI, Agents Hackathon, and more), building projects like Builder Passport and Kraken DaD, and working toward software that solves real problems with talented teams."
+      }
     }
   }
 }
