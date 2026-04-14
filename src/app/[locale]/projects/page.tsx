@@ -1,13 +1,25 @@
 import { getTranslations } from 'next-intl/server';
 
+type ProjectSlug =
+  | 'builder_passport'
+  | 'kraken_dad'
+  | 'bedside'
+  | 'pitch_maker'
+  | 'sealship'
+  | 'biome';
+
 type ProjectCard = {
-  slug: 'builder_passport' | 'kraken_dad';
+  slug: ProjectSlug;
   url: string;
 };
 
 const PROJECTS: ProjectCard[] = [
   { slug: 'builder_passport', url: 'https://github.com/patrickpassosb/builder-passport' },
   { slug: 'kraken_dad', url: 'https://github.com/patrickpassosb/Kraken-DaD' },
+  { slug: 'bedside', url: 'https://github.com/patrickpassosb/bedside' },
+  { slug: 'pitch_maker', url: 'https://github.com/patrickpassosb/pitch-maker' },
+  { slug: 'sealship', url: 'https://github.com/patrickpassosb/sealship' },
+  { slug: 'biome', url: 'https://github.com/patrickpassosb/Biometric-Optimization-Management-Engine' },
 ];
 
 export default async function ProjectsIndex() {
@@ -45,7 +57,7 @@ export default async function ProjectsIndex() {
                 </div>
                 <div className="flex justify-between border-b border-outline-variant/20 py-2">
                   <span className="text-outline">{t('status_label')}</span>
-                  <span className="text-secondary">{t('status_active')}</span>
+                  <span className="text-secondary">{t(`${project.slug}.status`)}</span>
                 </div>
               </div>
             </div>

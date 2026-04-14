@@ -93,18 +93,47 @@
     "view_repo": "View Repository",
     "stack_label": "STACK",
     "status_label": "STATUS",
-    "status_active": "ACTIVE",
     "builder_passport": {
       "architecture": "ARCHITECTURE: EVM / MONAD",
       "name": "Builder Passport",
       "description": "A portable on-chain record of hackathon participation, contribution, and achievements. It enables builders to establish a unified identity, receive official awards, and facilitate peer attestation on the Monad network.",
-      "stack": "SOLIDITY / NEXT.JS / WAGMI"
+      "stack": "SOLIDITY / NEXT.JS / WAGMI",
+      "status": "ACTIVE"
     },
     "kraken_dad": {
       "architecture": "ARCHITECTURE: LOGIC COMPOSER",
       "name": "Kraken DaD",
       "description": "A Kraken-native low-code strategy builder. Allows traders to visually compose logic routines, execute them safely in a rigorous dry-run environment, and optionally deploy them for live algorithmic trading.",
-      "stack": "REACT FLOW / FASTIFY / TS"
+      "stack": "REACT FLOW / FASTIFY / TS",
+      "status": "ACTIVE"
+    },
+    "bedside": {
+      "architecture": "ARCHITECTURE: AI HEALTHCARE SAAS",
+      "name": "Bedside",
+      "description": "An AI inpatient assistant delivered via WhatsApp. Patients text to get their schedule, medications, and reach clinical staff in their own language. Multi-tenant SaaS for hospitals — built for the Harvard HSIL Hackathon 2026.",
+      "stack": "NEXT.JS / TYPESCRIPT / WHATSAPP API",
+      "status": "ACTIVE"
+    },
+    "pitch_maker": {
+      "architecture": "ARCHITECTURE: AI VIDEO PIPELINE",
+      "name": "Pitch Maker",
+      "description": "An AI-powered tool that generates cinematic pitch videos. Automatically creates scripts, professional voiceovers, and stunning visuals from a short project spec — compressing a week of production into minutes.",
+      "stack": "PYTHON / TYPESCRIPT / AI",
+      "status": "ACTIVE"
+    },
+    "sealship": {
+      "architecture": "ARCHITECTURE: ON-CHAIN CODE REPUTATION",
+      "name": "Sealship",
+      "description": "A decentralized developer identity and code reputation system built for the Polkadot Solidity Hackathon 2026. Analyzes GitHub repos to produce a structured quality score, generates AI-powered reports, stores them on IPFS, and records cryptographic verification on-chain. Seal your code. Ship your trust.",
+      "stack": "SOLIDITY / TYPESCRIPT / POLKADOT / IPFS",
+      "status": "ACTIVE"
+    },
+    "biome": {
+      "architecture": "ARCHITECTURE: BIOMETRIC DATA SYSTEM",
+      "name": "Biome",
+      "description": "Biometric Optimization Management Engine — a personal system for collecting, tracking, and acting on biometric signals. Focused on turning raw body data into clear, day-to-day optimization loops.",
+      "stack": "TYPESCRIPT / HEALTH DATA",
+      "status": "IN PROGRESS"
     }
   },
   "Journey": {

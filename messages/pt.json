@@ -93,18 +93,47 @@
     "view_repo": "Ver Repositório",
     "stack_label": "STACK",
     "status_label": "STATUS",
-    "status_active": "ATIVO",
     "builder_passport": {
       "architecture": "ARQUITETURA: EVM / MONAD",
       "name": "Builder Passport",
       "description": "Um registro on-chain portátil de participação em hackathons, contribuições e conquistas. Permite que desenvolvedores estabeleçam uma identidade unificada, recebam prêmios oficiais e facilitem a atestação entre pares na rede Monad.",
-      "stack": "SOLIDITY / NEXT.JS / WAGMI"
+      "stack": "SOLIDITY / NEXT.JS / WAGMI",
+      "status": "ATIVO"
     },
     "kraken_dad": {
       "architecture": "ARQUITETURA: COMPOSITOR DE LÓGICA",
       "name": "Kraken DaD",
       "description": "Um construtor de estratégias low-code nativo do ecossistema Kraken. Permite que traders componham visualmente rotinas de lógica, as executem de forma segura em um ambiente de simulação rigoroso e as implantem opcionalmente para negociação algorítmica ao vivo.",
-      "stack": "REACT FLOW / FASTIFY / TS"
+      "stack": "REACT FLOW / FASTIFY / TS",
+      "status": "ATIVO"
+    },
+    "bedside": {
+      "architecture": "ARQUITETURA: SAAS DE SAÚDE COM IA",
+      "name": "Bedside",
+      "description": "Um assistente de pacientes internados com IA entregue via WhatsApp. Pacientes mandam mensagem para consultar a própria programação, medicações e falar com a equipe clínica no próprio idioma. SaaS multi-tenant para hospitais — construído para o Harvard HSIL Hackathon 2026.",
+      "stack": "NEXT.JS / TYPESCRIPT / WHATSAPP API",
+      "status": "ATIVO"
+    },
+    "pitch_maker": {
+      "architecture": "ARQUITETURA: PIPELINE DE VÍDEO COM IA",
+      "name": "Pitch Maker",
+      "description": "Uma ferramenta baseada em IA que gera vídeos de pitch cinematográficos. Cria automaticamente roteiros, narrações profissionais e visuais impactantes a partir de uma breve descrição do projeto — comprimindo uma semana de produção em minutos.",
+      "stack": "PYTHON / TYPESCRIPT / IA",
+      "status": "ATIVO"
+    },
+    "sealship": {
+      "architecture": "ARQUITETURA: REPUTAÇÃO DE CÓDIGO ON-CHAIN",
+      "name": "Sealship",
+      "description": "Sistema descentralizado de identidade e reputação de código para desenvolvedores, construído para o Polkadot Solidity Hackathon 2026. Analisa repositórios do GitHub para gerar um score estruturado de qualidade, produz relatórios com IA, armazena tudo no IPFS e registra a verificação criptográfica on-chain. Seal your code. Ship your trust.",
+      "stack": "SOLIDITY / TYPESCRIPT / POLKADOT / IPFS",
+      "status": "ATIVO"
+    },
+    "biome": {
+      "architecture": "ARQUITETURA: SISTEMA DE DADOS BIOMÉTRICOS",
+      "name": "Biome",
+      "description": "Biometric Optimization Management Engine — um sistema pessoal para coletar, acompanhar e agir sobre sinais biométricos. Focado em transformar dados brutos do corpo em ciclos claros de otimização do dia a dia.",
+      "stack": "TYPESCRIPT / DADOS DE SAÚDE",
+      "status": "EM ANDAMENTO"
     }
   },
   "Journey": {
