@@ -11,9 +11,60 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSerif = Noto_Serif({ subsets: ["latin"], variable: "--font-noto-serif" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+
 export const metadata: Metadata = {
-  title: "Patrick Passos | Builder OS",
-  description: "Architecting agentic systems & ambitious digital structures.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Patrick Passos | Builder OS",
+    template: "%s | Patrick Passos",
+  },
+  description:
+    "Software engineer & builder focused on agentic systems, deterministic infrastructure, and ambitious technical architecture.",
+  applicationName: "Patrick Passos | Builder OS",
+  authors: [{ name: "Patrick Passos", url: "https://github.com/patrickpassosb" }],
+  creator: "Patrick Passos",
+  keywords: [
+    "Patrick Passos",
+    "software engineer",
+    "agentic systems",
+    "deterministic infrastructure",
+    "Next.js",
+    "builder",
+    "AI engineer",
+  ],
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Patrick Passos | Builder OS",
+    title: "Patrick Passos | Builder OS",
+    description:
+      "Architecting agentic systems & ambitious digital structures.",
+    url: siteUrl,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Patrick Passos | Builder OS",
+    description:
+      "Architecting agentic systems & ambitious digital structures.",
+    creator: "@patrickpassosb",
+  },
+  alternates: {
+    canonical: "/",
+    languages: {
+      en: "/en",
+      pt: "/pt",
+      "x-default": "/en",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default async function RootLayout({

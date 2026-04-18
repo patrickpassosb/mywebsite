@@ -1,35 +1,59 @@
-# Patrick Passos - Builder OS 
+# Patrick Passos — Builder OS
 
-The personal digital infrastructure for Patrick Passos. Designed as a serious, long-term platform for a technical builder focused on ambitious technology and deterministic systems.
+Personal website & portfolio. A long-term editorial-style platform for a technical
+builder focused on agentic systems and deterministic infrastructure.
 
-## Purpose
-This repository serves as a personal website and portfolio. It rejects the generic "startup landing page" aesthetic in favor of a credible, highly intentional "Laboratory Editorial" look.
+## Stack
 
-## Technologies Used
-- Next.js
-- Tailwind CSS
-- TypeScript
+- **Framework:** Next.js 16 (App Router, Turbopack)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS ("Laboratory Editorial" tokens in `src/app/globals.css`)
+- **i18n:** `next-intl` (English + Portuguese)
+- **Theming:** `next-themes` (light / dark / system)
+- **Package manager:** Bun
 
-## Local Development
-Since the preferred environment is **bun**:
+## Local development
 
-1. Ensure Bun is installed on your system.
-2. Install dependencies:
-   ```bash
-   bun install
-   ```
-3. Run the development server:
-   ```bash
-   bun run dev
-   ```
-4. Open [http://localhost:3000](http://localhost:3000)
+```bash
+bun install
+bun run dev
+```
 
-## Customization TODO List
-The site has been populated with high-fidelity UI but uses generic placeholders so you can safely inject your exact data without fake achievements. Please update:
+Open http://localhost:3000 — the middleware redirects `/` to the preferred locale.
 
-- [ ] `src/app/page.tsx`: Swap "Project Alpha" and "Project Beta" with real case studies.
-- [ ] `src/app/page.tsx`: Update the "What I'm building now" bento grid. 
-- [ ] `src/app/layout.tsx`: Enter correct links for GitHub, LinkedIn, X, and YouTube in the Navbar and Footer.
-- [ ] `src/app/page.tsx`: Modify the `mailto:` email block at the bottom to use your actual email address.
-- [ ] `src/app/journey/page.tsx`: Expand on your personal journey with specific metadata and dates.
-- [ ] Implement Markdown/MDX parser of your choice for rendering `.mdx` files dynamically when your essays are ready.
+## Scripts
+
+| Command | Purpose |
+|---|---|
+| `bun run dev` | Start the dev server |
+| `bun run build` | Production build |
+| `bun run start` | Run the production server |
+| `bun run test:unit` | Vitest unit tests |
+| `bun run test:e2e` | Playwright end-to-end tests |
+
+## Project layout
+
+```
+src/
+  app/
+    [locale]/        # Localized routes: /, /projects, /journey, /writing
+    globals.css      # Design tokens + Tailwind layers
+    robots.ts        # Dynamic robots.txt
+    sitemap.ts       # Locale-aware sitemap
+  components/        # SettingsMenu, ThemeProvider
+  i18n/              # next-intl request config
+  proxy.ts           # Next 16 proxy (locale routing)
+messages/            # en.json, pt.json
+public/              # Static assets served at /
+```
+
+## Deployment
+
+Deployed to Vercel. On first deploy, set:
+
+```
+NEXT_PUBLIC_SITE_URL=https://<your-domain>
+```
+
+in the Vercel project settings so `metadataBase`, `sitemap.xml`, and `robots.txt`
+use the canonical URL.

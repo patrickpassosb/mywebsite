@@ -4,18 +4,21 @@ export default function WritingPage() {
       <h1 className="font-serif italic text-6xl leading-tight text-on-surface mb-8">
         Writing &amp; Notes
       </h1>
-      <p className="font-body text-xl text-on-surface-variant max-w-2xl mb-12">
+      <p className="font-body text-xl text-on-surface-variant max-w-2xl mb-16">
         Essays, experiments, reflections, and technical notes on software engineering.
       </p>
 
-      <div className="space-y-4">
-          <a href="#" className="block bg-surface-container-lowest p-8 border border-surface-container hover:border-primary transition-colors">
-              <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="font-serif text-2xl">The Case for Deterministic Infrastructure</h3>
-                  <span className="font-mono text-xs text-outline">TBD</span>
-              </div>
-              <p className="text-on-surface-variant">Placeholder for technical essay.</p>
-          </a>
+      <div className="border border-outline-variant/30 bg-surface-container-lowest p-16 text-center">
+        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-outline block mb-6">
+          Status · Incoming
+        </span>
+        <h3 className="font-serif italic text-3xl text-on-surface mb-4">
+          First essays are being compiled.
+        </h3>
+        <p className="text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+          Long-form notes on agentic systems, deterministic infrastructure, and
+          building ambitious technology will appear here soon.
+        </p>
       </div>
     </section>
   );

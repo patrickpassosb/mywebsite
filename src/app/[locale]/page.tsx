@@ -66,16 +66,16 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-1 bg-surface-container">
-            <Link href={`/${locale}/writing/placeholder-1`} className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500">
-              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">TBD</span>
+            <Link href={`/${locale}/writing`} className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500">
+              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">Incoming</span>
               <h4 className="font-serif text-xl leading-snug text-on-surface group-hover:text-on-primary">{t('writing.post1')}</h4>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-auto text-primary group-hover:text-on-primary group-hover:translate-x-2 transition-transform">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
-            <Link href={`/${locale}/writing/placeholder-2`} className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500">
-              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">TBD</span>
+            <Link href={`/${locale}/writing`} className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500">
+              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">Incoming</span>
               <h4 className="font-serif text-xl leading-snug text-on-surface group-hover:text-on-primary">{t('writing.post2')}</h4>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-auto text-primary group-hover:text-on-primary group-hover:translate-x-2 transition-transform">
                 <line x1="5" y1="12" x2="19" y2="12" />
