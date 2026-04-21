@@ -103,6 +103,9 @@ export default async function RootLayout({
               <Link href={`/${locale}/writing`} className="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo">
                 {t('writing')}
               </Link>
+              <Link href={`/${locale}/services`} className="text-zinc-500 dark:text-zinc-400 font-medium font-mono text-xs uppercase tracking-widest hover:text-[#0058bc] transition-colors duration-300 ease-out-expo">
+                {t('services')}
+              </Link>
             </div>
             
             <div className="hidden md:flex items-center space-x-6">

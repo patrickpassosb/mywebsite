@@ -3,6 +3,7 @@
     "projects": "Projetos",
     "journey": "Jornada",
     "writing": "Textos",
+    "services": "Serviços",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "x": "X",
@@ -170,6 +171,75 @@
         "title": "Hackathons & Construção",
         "description": "De volta ao Brasil, fui direto para a cena de hackathons, começando pelo NASA Space Apps Challenge — o maior hackathon do mundo. De lá pra cá venho entregando em hackathons (Suno AI, Agents Hackathon e outros), construindo projetos como o Builder Passport e o Kraken DaD, e trabalhando rumo a software que resolva problemas reais com times talentosos."
       }
+    }
+  },
+  "Services": {
+    "label": "Freelance — Aberto a Novos Projetos",
+    "title": "Serviços",
+    "description": "Construo back-end, front-end, sistemas completos e automações com IA. Aprendo rápido em stacks novos — trabalho em parceria com Claude Code, Codex e OpenCode para entregar em território desconhecido.",
+    "offer": {
+      "title": "O que eu construo",
+      "subtitle": "Entrega ponta a ponta, sob medida para o problema.",
+      "item1": {
+        "label": "BACK-END",
+        "title": "APIs & Serviços",
+        "description": "Serviços, APIs e pipelines de dados em Node.js, Python (FastAPI) e TypeScript. Construídos para serem determinísticos e observáveis."
+      },
+      "item2": {
+        "label": "FRONT-END",
+        "title": "Interfaces Web",
+        "description": "Interfaces React e Next.js em produção. Tipadas, acessíveis e rápidas — com atenção honesta à experiência do usuário."
+      },
+      "item3": {
+        "label": "SISTEMAS COMPLETOS",
+        "title": "Aplicações Ponta a Ponta",
+        "description": "Aplicações completas conectadas ponta a ponta — banco, API, UI, auth, deploy. Entregando a fatia inteira, não só pedaços."
+      },
+      "item4": {
+        "label": "AUTOMAÇÕES COM IA",
+        "title": "Fluxos de Agentes",
+        "description": "Fluxos de agentes e automações usando Claude Code, Codex e OpenCode. Substituindo trabalho repetitivo por pipelines confiáveis e auditáveis."
+      }
+    },
+    "stack": {
+      "title": "Stack",
+      "subtitle": "Ferramentas que uso primeiro.",
+      "languages": "LINGUAGENS",
+      "languages_value": "TypeScript · Python · JavaScript · Shell · Solidity (aprendendo)",
+      "backend": "BACKEND",
+      "backend_value": "Node.js · Bun · FastAPI",
+      "frontend": "FRONTEND",
+      "frontend_value": "React · Next.js · HTML · CSS · Tailwind",
+      "agents": "AGENTES DE IA",
+      "agents_value": "Claude Code · Codex · OpenCode"
+    },
+    "approach": {
+      "title": "Como eu trabalho",
+      "item1": {
+        "title": "Entrega AI-native",
+        "description": "Uso Claude Code, Codex e OpenCode como parceiros em todo projeto. Isso significa iteração mais rápida sem abrir mão de revisão ou correção."
+      },
+      "item2": {
+        "title": "Aprendo rápido",
+        "description": "Stack novo ou domínio desconhecido? Aprendo rápido — lendo docs, experimentando e usando agentes como alavanca para cobrir terreno que normalmente levaria semanas."
+      },
+      "item3": {
+        "title": "Entregar, depois refinar",
+        "description": "Entrego a menor coisa real que prova a ideia, e depois refino com feedback. Software funcionando vale mais que um plano longo."
+      }
+    },
+    "projects_cta": {
+      "title": "Veja meu trabalho",
+      "description": "Um diretório vivo de sistemas que entreguei — de projetos de hackathon a sistemas on-chain.",
+      "link": "Ver Projetos"
+    },
+    "contact": {
+      "label": "Aberto a Trabalho Freelance",
+      "title": "Vamos construir algo.",
+      "description": "Tem um projeto em mente? Entre em contato direto ou agende uma call — respondo em até 24 horas.",
+      "email_button": "E-mail",
+      "telegram_button": "Telegram",
+      "book_button": "Agendar uma Call"
     }
   }
 }

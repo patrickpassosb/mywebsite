@@ -3,6 +3,7 @@
     "projects": "Projects",
     "journey": "Journey",
     "writing": "Writing",
+    "services": "Services",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "x": "X",
@@ -170,6 +171,75 @@
         "title": "Hackathons & Building",
         "description": "Back in Brazil, I went straight into the hackathon scene, starting with the NASA Space Apps Challenge — the largest hackathon in the world. Since then I've been shipping at hackathons (Suno AI, Agents Hackathon, and more), building projects like Builder Passport and Kraken DaD, and working toward software that solves real problems with talented teams."
       }
+    }
+  },
+  "Services": {
+    "label": "Freelance — Open for New Projects",
+    "title": "Services",
+    "description": "I build back-end, front-end, full systems, and AI automations with code. Fast to ramp on new stacks — I pair with Claude Code, Codex, and OpenCode to ship in unfamiliar territory.",
+    "offer": {
+      "title": "What I Build",
+      "subtitle": "End-to-end delivery, tailored to the problem.",
+      "item1": {
+        "label": "BACK-END",
+        "title": "APIs & Services",
+        "description": "Services, APIs, and data pipelines in Node.js, Python (FastAPI), and TypeScript. Built to be deterministic and observable."
+      },
+      "item2": {
+        "label": "FRONT-END",
+        "title": "Web Interfaces",
+        "description": "Production React and Next.js interfaces. Typed, accessible, and fast — with honest attention to UX."
+      },
+      "item3": {
+        "label": "FULL SYSTEMS",
+        "title": "End-to-End Applications",
+        "description": "Complete applications wired end-to-end — database, API, UI, auth, deploy. Shipping the whole slice, not just pieces."
+      },
+      "item4": {
+        "label": "AI AUTOMATIONS",
+        "title": "Agent Workflows",
+        "description": "Agent workflows and automations using Claude Code, Codex, and OpenCode. Replacing repetitive work with reliable, auditable pipelines."
+      }
+    },
+    "stack": {
+      "title": "Stack",
+      "subtitle": "Tools I reach for first.",
+      "languages": "LANGUAGES",
+      "languages_value": "TypeScript · Python · JavaScript · Shell · Solidity (learning)",
+      "backend": "BACKEND",
+      "backend_value": "Node.js · Bun · FastAPI",
+      "frontend": "FRONTEND",
+      "frontend_value": "React · Next.js · HTML · CSS · Tailwind",
+      "agents": "AI AGENTS",
+      "agents_value": "Claude Code · Codex · OpenCode"
+    },
+    "approach": {
+      "title": "How I Work",
+      "item1": {
+        "title": "AI-native shipping",
+        "description": "I pair with Claude Code, Codex, and OpenCode on every project. That means faster iteration without sacrificing review or correctness."
+      },
+      "item2": {
+        "title": "Fast to ramp",
+        "description": "New stack or unfamiliar domain? I ramp quickly — reading docs, experimenting, and using agents as leverage to cover ground that would otherwise take weeks."
+      },
+      "item3": {
+        "title": "Ship, then refine",
+        "description": "I deliver the smallest real thing that proves the idea, then refine against feedback. Working software beats a long plan."
+      }
+    },
+    "projects_cta": {
+      "title": "See my work",
+      "description": "A living directory of systems I've shipped — from hackathon builds to on-chain systems.",
+      "link": "View Projects"
+    },
+    "contact": {
+      "label": "Open to Freelance Work",
+      "title": "Let's build something.",
+      "description": "Have a project in mind? Reach out directly or book a call — I respond within 24 hours.",
+      "email_button": "Email",
+      "telegram_button": "Telegram",
+      "book_button": "Book a Call"
     }
   }
 }
