@@ -38,3 +38,8 @@ next-env.d.ts
 .omc
 .codex
 .omx
+
+# alternate package managers (this project uses bun)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

@@ -1,51 +1,47 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Theme Switching', () => {
-  test('should switch to dark mode and apply high-contrast background', async ({ page }) => {
-    // Navigate to the homepage (English)
+test.describe('Theme switching', () => {
+  test('switches to dark mode and applies the high-contrast background', async ({ page }) => {
     await page.goto('/en');
 
-    // Find the settings menu button (it has the settings icon)
-    const settingsButton = page.getByRole('button', { name: /settings|configurações/i });
-    await expect(settingsButton).toBeVisible();
-    await settingsButton.click();
+    await page.getByRole('button', { name: /settings menu|menu de configurações/i }).click();
+    await page.getByRole('menuitemradio', { name: /^dark$/i }).click();
 
-    // Find the 'Dark' theme option
-    const darkOption = page.getByRole('button', { name: /dark|escuro/i });
-    await expect(darkOption).toBeVisible();
-    await darkOption.click();
+    await expect(page.locator('html')).toHaveClass(/dark/);
+    await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(9, 9, 11)');
+    await expect(page.getByRole('heading', { name: /Patrick Passos/i }).first()).toHaveCSS(
+      'color',
+      'rgb(244, 244, 245)',
+    );
+  });
+});
 
-    // Verify that the 'dark' class is present on the html element
-    const html = page.locator('html');
-    await expect(html).toHaveClass(/dark/);
+test.describe('Localization', () => {
+  test('switches between languages and preserves the current route', async ({ page }) => {
+    await page.goto('/en/services');
 
-    // Verify that the background-color of the body is dark (Zinc-950)
-    // #09090b is Zinc-950
-    const body = page.locator('body');
-    await expect(body).toHaveCSS('background-color', 'rgb(9, 9, 11)');
+    await page.getByRole('button', { name: /settings menu|menu de configurações/i }).click();
+    await page.getByRole('menuitemradio', { name: /português/i }).click();
 
-    // Verify that the hero text is visible (High contrast Zinc-100)
-    // #f4f4f5 is Zinc-100
-    const heroTitle = page.getByRole('heading', { name: /Patrick Passos/i });
-    await expect(heroTitle).toHaveCSS('color', 'rgb(244, 244, 245)');
+    await expect(page).toHaveURL(/\/pt\/services$/);
+    await expect(page.getByRole('heading', { name: /Serviços/i })).toBeVisible();
   });
 
-  test('should switch between languages correctly', async ({ page }) => {
-    await page.goto('/en');
-    
-    // Check English header
-    await expect(page.getByRole('heading', { name: /Patrick Passos/i })).toBeVisible();
-    
-    // Click Settings
-    await page.getByRole('button', { name: /settings/i }).click();
-    
-    // Switch to Portuguese
-    await page.getByRole('button', { name: /português/i }).click();
-    
-    // Verify URL change
-    await expect(page).toHaveURL(/\/pt/);
-    
-    // Verify translated content
-    await expect(page.getByText(/O que estou construindo agora/i)).toBeVisible();
+  test('serves localized content for direct navigation to /pt/writing', async ({ page }) => {
+    await page.goto('/pt/writing');
+    await expect(page.getByRole('heading', { name: /Textos & Notas/i })).toBeVisible();
+    await expect(page.getByText(/Os primeiros ensaios estão sendo compilados/i)).toBeVisible();
+  });
+});
+
+test.describe('Navigation active state', () => {
+  test('highlights the link matching the current route', async ({ page }) => {
+    await page.goto('/en/journey');
+
+    const journeyLink = page.getByRole('link', { name: /^journey$/i }).first();
+    const projectsLink = page.getByRole('link', { name: /^projects$/i }).first();
+
+    await expect(journeyLink).toHaveAttribute('aria-current', 'page');
+    await expect(projectsLink).not.toHaveAttribute('aria-current', 'page');
   });
 });
