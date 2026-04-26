@@ -38,6 +38,7 @@ next-env.d.ts
 .omc
 .codex
 .omx
+.claude
 
 # alternate package managers (this project uses bun)
 package-lock.json
