@@ -3,63 +3,27 @@
     "projects": "Projects",
     "journey": "Journey",
     "writing": "Writing",
-    "services": "Services",
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "x": "X",
-    "youtube": "YouTube",
-    "switch_locale": "PT"
+    "services": "Services"
+  },
+  "Settings": {
+    "label": "Settings menu",
+    "theme": "Theme",
+    "language": "Language",
+    "themes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "languages": {
+      "en": "English",
+      "pt": "Português"
+    }
   },
   "Index": {
     "title": "Software Engineer & Builder",
     "description": "Looking to advance the frontier of science and technology. I have studied AI, science, and technology to build systems that scale.",
     "projects": "Projects",
     "journey": "Journey",
-    "building_now": {
-      "title": "What I’m Building Now",
-      "status_label": "ACTIVE_PROCESSES",
-      "project1": {
-        "title": "Autonomous Infrastructure",
-        "description": "Developing self-healing environments using large action models to minimize operational latency.",
-        "link": "View Status"
-      },
-      "project2": {
-        "title": "Deterministic Agents",
-        "description": "A framework for LLM orchestration that guarantees verifiable output paths through symbolic logic constraints.",
-        "link": "View Status"
-      },
-      "project3": {
-        "title": "Modular OS",
-        "description": "Redefining the personal workspace as a composable set of technical primitives for deep work and high output.",
-        "link": "View Status"
-      }
-    },
-    "selected_projects": {
-      "title": "Selected Projects",
-      "view_repo": "View Repository",
-      "project1": {
-        "description": "A portable on-chain record of hackathon participation, contribution, and achievements. It enables builders to establish a unified identity, receive official awards, and facilitate peer attestation on the Monad network."
-      },
-      "project2": {
-        "description": "A Kraken-native low-code strategy builder. Allows traders to visually compose logic routines, execute them safely in a rigorous dry-run environment, and optionally deploy them for live algorithmic trading."
-      }
-    },
-    "philosophy": {
-      "title": "Building Philosophy",
-      "subtitle": "Core engineering principles",
-      "principle1": {
-        "title": "Deterministic Systems",
-        "description": "Complexity should never breed unpredictability. I build systems where the outcome is a mathematical certainty, not a statistical probability."
-      },
-      "principle2": {
-        "title": "Minimalist Engineering",
-        "description": "Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away from the codebase."
-      },
-      "principle3": {
-        "title": "Agency as a Partner",
-        "description": "AI isn't a replacement for the builder, but a high-fidelity partner that extends our cognitive reach across vast technical surfaces."
-      }
-    },
     "journey_preview": {
       "title": "Journey Preview",
       "link": "View Full Log",
@@ -172,6 +136,13 @@
         "description": "Back in Brazil, I went straight into the hackathon scene, starting with the NASA Space Apps Challenge — the largest hackathon in the world. Since then I've been shipping at hackathons (Suno AI, Agents Hackathon, and more), building projects like Builder Passport and Kraken DaD, and working toward software that solves real problems with talented teams."
       }
     }
+  },
+  "Writing": {
+    "title": "Writing & Notes",
+    "description": "Essays, experiments, reflections, and technical notes on software engineering.",
+    "status": "Status · Incoming",
+    "placeholder_title": "First essays are being compiled.",
+    "placeholder_description": "Long-form notes on agentic systems, deterministic infrastructure, and building ambitious technology will appear here soon."
   },
   "Services": {
     "label": "Freelance — Open for New Projects",

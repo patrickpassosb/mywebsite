@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
+import { contact } from '@/lib/site';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -95,10 +96,10 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             {t('contact.description')}
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-            <a href="mailto:patrickpassosb@gmail.com" className="bg-primary text-on-primary px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-primary-container transition-all">
+            <a href={`mailto:${contact.email}`} className="bg-primary text-on-primary px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-primary-container transition-all">
               {t('contact.email_button')}
             </a>
-            <a href="https://t.me/patrickpassos" target="_blank" rel="noopener noreferrer" className="border border-outline-variant px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto text-on-surface hover:bg-surface-container transition-all">
+            <a href={contact.telegram} target="_blank" rel="noopener noreferrer" className="border border-outline-variant px-12 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto text-on-surface hover:bg-surface-container transition-all">
               {t('contact.telegram_button')}
             </a>
           </div>

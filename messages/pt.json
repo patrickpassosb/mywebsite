@@ -3,63 +3,27 @@
     "projects": "Projetos",
     "journey": "Jornada",
     "writing": "Textos",
-    "services": "Serviços",
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "x": "X",
-    "youtube": "YouTube",
-    "switch_locale": "EN"
+    "services": "Serviços"
+  },
+  "Settings": {
+    "label": "Menu de configurações",
+    "theme": "Tema",
+    "language": "Idioma",
+    "themes": {
+      "light": "Claro",
+      "dark": "Escuro",
+      "system": "Sistema"
+    },
+    "languages": {
+      "en": "English",
+      "pt": "Português"
+    }
   },
   "Index": {
     "title": "Engenheiro de Software & Builder",
     "description": "Buscando avançar as fronteiras da ciência e da tecnologia. Estudei Inteligência Artificial, ciência e tecnologia para construir ambientes tecnológicos escaláveis.",
     "projects": "Projetos",
     "journey": "Jornada",
-    "building_now": {
-      "title": "O que estou construindo agora",
-      "status_label": "PROCESSOS_ATIVOS",
-      "project1": {
-        "title": "Infraestrutura Autônoma",
-        "description": "Desenvolvendo ambientes que se auto-recuperam utilizando grandes modelos de ação para minimizar a latência operacional.",
-        "link": "Ver Status"
-      },
-      "project2": {
-        "title": "Agentes Determinísticos",
-        "description": "Um framework para orquestração de LLMs que garante caminhos de saída verificáveis através de restrições de lógica simbólica.",
-        "link": "Ver Status"
-      },
-      "project3": {
-        "title": "Modular OS",
-        "description": "Redefinindo o espaço de trabalho pessoal como um conjunto de primitivas técnicas combináveis para trabalho focado e alta produtividade.",
-        "link": "Ver Status"
-      }
-    },
-    "selected_projects": {
-      "title": "Projetos Selecionados",
-      "view_repo": "Ver Repositório",
-      "project1": {
-        "description": "Um registro on-chain portátil de participação em hackathons, contribuições e conquistas. Permite que desenvolvedores estabeleçam uma identidade unificada, recebam prêmios oficiais e facilitem a atestação entre pares na rede Monad."
-      },
-      "project2": {
-        "description": "Um construtor de estratégias low-code nativo do ecossistema Kraken. Permite que traders componham visualmente rotinas de lógica, as executem de forma segura em um ambiente de simulação rigoroso e as implantem opcionalmente para negociação algorítmica ao vivo."
-      }
-    },
-    "philosophy": {
-      "title": "Filosofia de Construção",
-      "subtitle": "Princípios fundamentais de engenharia",
-      "principle1": {
-        "title": "Sistemas Determinísticos",
-        "description": "A complexidade nunca deve gerar imprevisibilidade. Eu construo sistemas onde o resultado é uma certeza física, não uma probabilidade estatística."
-      },
-      "principle2": {
-        "title": "Engenharia Minimalista",
-        "description": "A perfeição é alcançada não quando não há mais nada a adicionar, mas sim quando não há nada sobrando que possa ser removido do código."
-      },
-      "principle3": {
-        "title": "Agência como Parceira",
-        "description": "IA não é um substituto para o desenvolvedor, mas um parceiro de alta fidelidade que amplia nosso alcance cognitivo em vastas superfícies técnicas."
-      }
-    },
     "journey_preview": {
       "title": "Prévia da Jornada",
       "link": "Ver Log Completo",
@@ -172,6 +136,13 @@
         "description": "De volta ao Brasil, fui direto para a cena de hackathons, começando pelo NASA Space Apps Challenge — o maior hackathon do mundo. De lá pra cá venho entregando em hackathons (Suno AI, Agents Hackathon e outros), construindo projetos como o Builder Passport e o Kraken DaD, e trabalhando rumo a software que resolva problemas reais com times talentosos."
       }
     }
+  },
+  "Writing": {
+    "title": "Textos & Notas",
+    "description": "Ensaios, experimentos, reflexões e notas técnicas sobre engenharia de software.",
+    "status": "Status · Em breve",
+    "placeholder_title": "Os primeiros ensaios estão sendo compilados.",
+    "placeholder_description": "Notas longas sobre sistemas agenticos, infraestrutura determinística e como construir tecnologia ambiciosa vão aparecer aqui em breve."
   },
   "Services": {
     "label": "Freelance — Aberto a Novos Projetos",

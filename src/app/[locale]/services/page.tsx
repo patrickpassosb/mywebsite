@@ -1,9 +1,6 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-
-const EMAIL = 'patrickpassosb@gmail.com';
-const TELEGRAM_URL = 'https://t.me/patrickpassos';
-const CAL_URL = 'https://cal.com/patrickpassos';
+import { contact } from '@/lib/site';
 
 type OfferKey = 'item1' | 'item2' | 'item3' | 'item4';
 const OFFER_KEYS: OfferKey[] = ['item1', 'item2', 'item3', 'item4'];
@@ -154,13 +151,13 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6">
             <a
-              href={`mailto:${EMAIL}`}
+              href={`mailto:${contact.email}`}
               className="bg-primary text-on-primary px-10 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-primary-container transition-all"
             >
               {t('contact.email_button')}
             </a>
             <a
-              href={CAL_URL}
+              href={contact.cal}
               target="_blank"
               rel="noopener noreferrer"
               className="border border-primary text-primary px-10 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto hover:bg-primary-container hover:text-on-primary transition-all"
@@ -168,7 +165,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
               {t('contact.book_button')}
             </a>
             <a
-              href={TELEGRAM_URL}
+              href={contact.telegram}
               target="_blank"
               rel="noopener noreferrer"
               className="border border-outline-variant px-10 py-5 font-mono text-sm uppercase tracking-widest w-full md:w-auto text-on-surface hover:bg-surface-container transition-all"

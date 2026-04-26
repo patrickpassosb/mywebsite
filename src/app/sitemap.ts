@@ -1,11 +1,7 @@
 import type { MetadataRoute } from 'next';
+import { locales, siteUrl } from '@/lib/site';
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
-
-const locales = ['en', 'pt'] as const;
-const routes = ['', '/projects', '/journey', '/writing'] as const;
+const routes = ['', '/projects', '/journey', '/writing', '/services'] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

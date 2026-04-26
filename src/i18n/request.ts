@@ -1,17 +1,16 @@
-import {notFound} from 'next/navigation';
-import {getRequestConfig} from 'next-intl/server';
- 
-const locales = ['en', 'pt'];
- 
-export default getRequestConfig(async ({requestLocale}) => {
-  let locale = await requestLocale;
+import { getRequestConfig } from 'next-intl/server';
+import { defaultLocale, locales, type Locale } from '@/lib/site';
 
-  if (!locale || !locales.includes(locale as any)) {
-      locale = 'en';
-  }
- 
+function isLocale(value: string | undefined): value is Locale {
+  return !!value && (locales as readonly string[]).includes(value);
+}
+
+export default getRequestConfig(async ({ requestLocale }) => {
+  const requested = await requestLocale;
+  const locale: Locale = isLocale(requested) ? requested : defaultLocale;
+
   return {
     locale,
-    messages: (await import(`../../messages/${locale}.json`)).default
+    messages: (await import(`../../messages/${locale}.json`)).default,
   };
 });
