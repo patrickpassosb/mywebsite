@@ -1,4 +1,35 @@
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Projects' });
+  const path = `/${locale}/projects`;
+  return {
+    title: t('seo.title'),
+    description: t('seo.description'),
+    alternates: {
+      canonical: path,
+      languages: {
+        en: '/en/projects',
+        pt: '/pt/projects',
+      },
+    },
+    openGraph: {
+      title: t('seo.title'),
+      description: t('seo.description'),
+      url: path,
+    },
+    twitter: {
+      title: t('seo.title'),
+      description: t('seo.description'),
+    },
+  };
+}
 
 type ProjectSlug =
   | 'builder_passport'

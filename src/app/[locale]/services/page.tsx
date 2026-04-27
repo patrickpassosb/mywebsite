@@ -1,6 +1,37 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { contact } from '@/lib/site';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Services' });
+  const path = `/${locale}/services`;
+  return {
+    title: t('seo.title'),
+    description: t('seo.description'),
+    alternates: {
+      canonical: path,
+      languages: {
+        en: '/en/services',
+        pt: '/pt/services',
+      },
+    },
+    openGraph: {
+      title: t('seo.title'),
+      description: t('seo.description'),
+      url: path,
+    },
+    twitter: {
+      title: t('seo.title'),
+      description: t('seo.description'),
+    },
+  };
+}
 
 type OfferKey = 'item1' | 'item2' | 'item3' | 'item4';
 const OFFER_KEYS: OfferKey[] = ['item1', 'item2', 'item3', 'item4'];

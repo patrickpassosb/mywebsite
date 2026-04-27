@@ -1,4 +1,35 @@
+import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Writing' });
+  const path = `/${locale}/writing`;
+  return {
+    title: t('seo.title'),
+    description: t('seo.description'),
+    alternates: {
+      canonical: path,
+      languages: {
+        en: '/en/writing',
+        pt: '/pt/writing',
+      },
+    },
+    openGraph: {
+      title: t('seo.title'),
+      description: t('seo.description'),
+      url: path,
+    },
+    twitter: {
+      title: t('seo.title'),
+      description: t('seo.description'),
+    },
+  };
+}
 
 export default async function WritingPage() {
   const t = await getTranslations('Writing');

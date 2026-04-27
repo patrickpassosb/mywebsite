@@ -55,6 +55,10 @@
   "Projects": {
     "title": "Projects",
     "description": "Systems I've built and the repositories behind them. A living directory, updated as I ship.",
+    "seo": {
+      "title": "Projects",
+      "description": "Selected work — AI agents, web applications, and custom systems shipped for clients and personal builds. See what I can build for you."
+    },
     "view_repo": "View Repository",
     "stack_label": "STACK",
     "status_label": "STATUS",
@@ -104,6 +108,10 @@
   "Journey": {
     "title": "Journey",
     "intro": "I'm Patrick Passos — 20 years old, born and raised in Brazil. This page is the real story of how I went from writing my first line of code at twelve to shipping at hackathons today, told in order.",
+    "seo": {
+      "title": "Journey",
+      "description": "How I went from learning to code at twelve to shipping AI systems and web apps for ambitious teams. The story behind the work."
+    },
     "chapters": {
       "age_12": {
         "label": "AGE 12",
@@ -140,6 +148,10 @@
   "Writing": {
     "title": "Writing & Notes",
     "description": "Essays, experiments, reflections, and technical notes on software engineering.",
+    "seo": {
+      "title": "Writing",
+      "description": "Notes on building AI systems, web infrastructure, and the engineering decisions behind shipped products."
+    },
     "status": "Status · Incoming",
     "placeholder_title": "First essays are being compiled.",
     "placeholder_description": "Long-form notes on agentic systems, deterministic infrastructure, and building ambitious technology will appear here soon."
@@ -148,6 +160,10 @@
     "label": "Freelance — Open for New Projects",
     "title": "Services",
     "description": "I build back-end, front-end, full systems, and AI automations with code. Fast to ramp on new stacks — I pair with Claude Code, Codex, and OpenCode to ship in unfamiliar territory.",
+    "seo": {
+      "title": "Services — Hire Me",
+      "description": "Freelance software engineering services: AI systems, web applications, custom backends, and technical consulting. Book a call to discuss your project."
+    },
     "offer": {
       "title": "What I Build",
       "subtitle": "End-to-end delivery, tailored to the problem.",

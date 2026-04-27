@@ -7,11 +7,14 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import SettingsMenu from '@/components/SettingsMenu';
 import NavLinks from '@/components/NavLinks';
-import { siteUrl, social } from '@/lib/site';
+import { siteUrl, social, contact } from '@/lib/site';
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const notoSerif = Noto_Serif({ subsets: ["latin"], variable: "--font-noto-serif" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
+
+const ROOT_DESCRIPTION =
+  "Software engineer building AI systems, web applications, and custom backends for ambitious teams. Available for freelance work — book a call to start.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -19,33 +22,36 @@ export const metadata: Metadata = {
     default: "Patrick Passos | Builder OS",
     template: "%s | Patrick Passos",
   },
-  description:
-    "Software engineer & builder focused on agentic systems, deterministic infrastructure, and ambitious technical architecture.",
-  applicationName: "Patrick Passos | Builder OS",
+  description: ROOT_DESCRIPTION,
+  applicationName: "Patrick Passos",
   authors: [{ name: "Patrick Passos", url: social.github }],
   creator: "Patrick Passos",
   keywords: [
     "Patrick Passos",
     "software engineer",
+    "freelance software engineer",
+    "AI developer for hire",
+    "AI agent development",
     "agentic systems",
-    "deterministic infrastructure",
-    "Next.js",
+    "Next.js developer",
+    "web developer for hire",
+    "custom software development",
+    "technical consulting",
+    "TypeScript developer",
     "builder",
     "AI engineer",
   ],
   openGraph: {
     type: "website",
-    siteName: "Patrick Passos | Builder OS",
-    title: "Patrick Passos | Builder OS",
-    description:
-      "Architecting agentic systems & ambitious digital structures.",
+    siteName: "Patrick Passos",
+    title: "Patrick Passos",
+    description: ROOT_DESCRIPTION,
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
     title: "Patrick Passos | Builder OS",
-    description:
-      "Architecting agentic systems & ambitious digital structures.",
+    description: ROOT_DESCRIPTION,
     creator: "@patrickpassosb",
   },
   alternates: {
@@ -60,6 +66,39 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Patrick Passos",
+  url: siteUrl,
+  jobTitle: "Software Engineer",
+  description: ROOT_DESCRIPTION,
+  knowsAbout: [
+    "AI systems",
+    "AI agents",
+    "Agentic systems",
+    "Web development",
+    "Next.js",
+    "TypeScript",
+    "Backend systems",
+    "Custom software development",
+    "Technical consulting",
+  ],
+  makesOffer: [
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI agent development" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web application development" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom backend systems" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Technical consulting" } },
+  ],
+  potentialAction: {
+    "@type": "ReserveAction",
+    target: contact.cal,
+    name: "Book a call",
+  },
+  sameAs: [social.github, social.linkedin, social.x, social.youtube],
+  email: `mailto:${contact.email}`,
 };
 
 export default async function RootLayout({
@@ -90,6 +129,10 @@ export default async function RootLayout({
   return (
     <html lang={locale} className="scroll-smooth" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body className={`${inter.variable} ${notoSerif.variable} ${spaceGrotesk.variable} transition-colors duration-300`} suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider messages={messages}>
             {/* TopNavBar */}

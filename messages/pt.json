@@ -55,6 +55,10 @@
   "Projects": {
     "title": "Projetos",
     "description": "Sistemas que construí e os repositórios por trás deles. Um diretório vivo, atualizado conforme eu entrego.",
+    "seo": {
+      "title": "Projetos",
+      "description": "Trabalhos selecionados — agentes de IA, aplicações web e sistemas customizados entregues para clientes e projetos pessoais. Veja o que posso construir para você."
+    },
     "view_repo": "Ver Repositório",
     "stack_label": "STACK",
     "status_label": "STATUS",
@@ -104,6 +108,10 @@
   "Journey": {
     "title": "Jornada",
     "intro": "Sou o Patrick Passos — 20 anos, nascido e criado no Brasil. Esta página é a história real de como fui da minha primeira linha de código aos 12 anos até estar entregando em hackathons hoje, contada em ordem.",
+    "seo": {
+      "title": "Jornada",
+      "description": "Como fui de aprender a programar aos 12 anos até entregar sistemas de IA e aplicações web para times ambiciosos. A história por trás do trabalho."
+    },
     "chapters": {
       "age_12": {
         "label": "12 ANOS",
@@ -140,6 +148,10 @@
   "Writing": {
     "title": "Textos & Notas",
     "description": "Ensaios, experimentos, reflexões e notas técnicas sobre engenharia de software.",
+    "seo": {
+      "title": "Textos",
+      "description": "Notas sobre construção de sistemas de IA, infraestrutura web e as decisões de engenharia por trás de produtos entregues."
+    },
     "status": "Status · Em breve",
     "placeholder_title": "Os primeiros ensaios estão sendo compilados.",
     "placeholder_description": "Notas longas sobre sistemas agenticos, infraestrutura determinística e como construir tecnologia ambiciosa vão aparecer aqui em breve."
@@ -148,6 +160,10 @@
     "label": "Freelance — Aberto a Novos Projetos",
     "title": "Serviços",
     "description": "Construo back-end, front-end, sistemas completos e automações com IA. Aprendo rápido em stacks novos — trabalho em parceria com Claude Code, Codex e OpenCode para entregar em território desconhecido.",
+    "seo": {
+      "title": "Serviços — Contrate-me",
+      "description": "Serviços freelance de engenharia de software: sistemas de IA, aplicações web, back-ends customizados e consultoria técnica. Agende uma call para conversar sobre seu projeto."
+    },
     "offer": {
       "title": "O que eu construo",
       "subtitle": "Entrega ponta a ponta, sob medida para o problema.",
