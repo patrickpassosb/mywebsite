@@ -55,7 +55,7 @@ describe('message bundles', () => {
       'Index',
       'Projects',
       'Journey',
-      'Writing',
+      'Articles',
       'Services',
     ];
     for (const ns of required) {

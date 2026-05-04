@@ -1,10 +1,14 @@
 import type { MetadataRoute } from 'next';
+import { getArticleSlugs } from '@/lib/articles';
 import { locales, siteUrl } from '@/lib/site';
 
-const routes = ['', '/projects', '/journey', '/writing', '/services'] as const;
+const staticRoutes = ['', '/projects', '/journey', '/articles', '/services'] as const;
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const slugs = await getArticleSlugs();
+  const articleRoutes = slugs.map((slug) => `/articles/${slug}` as const);
+  const routes = [...staticRoutes, ...articleRoutes];
 
   return locales.flatMap((locale) =>
     routes.map((route) => ({

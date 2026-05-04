@@ -2,7 +2,7 @@
   "Navigation": {
     "projects": "Projects",
     "journey": "Journey",
-    "writing": "Writing",
+    "articles": "Articles",
     "services": "Services"
   },
   "Settings": {
@@ -38,11 +38,9 @@
         "description": "First programming course and my first games — the spark that set the direction."
       }
     },
-    "writing": {
-      "title": "Writing & Notes",
-      "link": "View All Content",
-      "post1": "The Case for Deterministic Engineering",
-      "post2": "Systems Thinking"
+    "articles": {
+      "title": "Articles & Notes",
+      "link": "View all articles"
     },
     "contact": {
       "label": "Ready to Build?",
@@ -145,16 +143,15 @@
       }
     }
   },
-  "Writing": {
-    "title": "Writing & Notes",
+  "Articles": {
+    "title": "Articles",
     "description": "Essays, experiments, reflections, and technical notes on software engineering.",
     "seo": {
-      "title": "Writing",
+      "title": "Articles",
       "description": "Notes on building AI systems, web infrastructure, and the engineering decisions behind shipped products."
     },
-    "status": "Status · Incoming",
-    "placeholder_title": "First essays are being compiled.",
-    "placeholder_description": "Long-form notes on agentic systems, deterministic infrastructure, and building ambitious technology will appear here soon."
+    "empty": "First articles are being compiled — check back soon.",
+    "translation_pending": "Translation coming soon — reading the English version."
   },
   "Services": {
     "label": "Freelance — Open for New Projects",

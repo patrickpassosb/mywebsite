@@ -2,7 +2,7 @@
   "Navigation": {
     "projects": "Projetos",
     "journey": "Jornada",
-    "writing": "Textos",
+    "articles": "Artigos",
     "services": "Serviços"
   },
   "Settings": {
@@ -38,11 +38,9 @@
         "description": "Primeiro curso de programação e os primeiros jogos — a faísca que definiu o rumo."
       }
     },
-    "writing": {
-      "title": "Textos & Notas",
-      "link": "Ver todo conteúdo",
-      "post1": "O Caso da Engenharia Determinística",
-      "post2": "Pensamento Sistêmico"
+    "articles": {
+      "title": "Artigos & Notas",
+      "link": "Ver todos os artigos"
     },
     "contact": {
       "label": "Pronto para Construir?",
@@ -145,16 +143,15 @@
       }
     }
   },
-  "Writing": {
-    "title": "Textos & Notas",
+  "Articles": {
+    "title": "Artigos",
     "description": "Ensaios, experimentos, reflexões e notas técnicas sobre engenharia de software.",
     "seo": {
-      "title": "Textos",
+      "title": "Artigos",
       "description": "Notas sobre construção de sistemas de IA, infraestrutura web e as decisões de engenharia por trás de produtos entregues."
     },
-    "status": "Status · Em breve",
-    "placeholder_title": "Os primeiros ensaios estão sendo compilados.",
-    "placeholder_description": "Notas longas sobre sistemas agenticos, infraestrutura determinística e como construir tecnologia ambiciosa vão aparecer aqui em breve."
+    "empty": "Os primeiros artigos estão sendo compilados — volte em breve.",
+    "translation_pending": "Tradução em breve — lendo a versão em inglês."
   },
   "Services": {
     "label": "Freelance — Aberto a Novos Projetos",

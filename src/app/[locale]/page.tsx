@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
-import { contact } from '@/lib/site';
+import { getArticles } from '@/lib/articles';
+import { contact, type Locale } from '@/lib/site';
 
-export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+export default async function Home({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   const t = await getTranslations('Index');
+  const tArticles = await getTranslations('Articles');
+  const articles = (await getArticles(locale)).slice(0, 4);
 
   return (
     <>
@@ -57,33 +60,47 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </div>
       </section>
 
-      {/* Writing / Notes Preview */}
-      <section className="py-32 px-8 bg-surface-container-low" id="writing">
+      {/* Articles Preview */}
+      <section className="py-32 px-8 bg-surface-container-low" id="articles">
         <div className="max-w-screen-2xl mx-auto">
           <div className="flex justify-between items-baseline mb-16">
-            <h2 className="font-serif italic text-4xl text-on-surface">{t('writing.title')}</h2>
-            <Link href={`/${locale}/writing`} className="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary">
-              {t('writing.link')}
+            <h2 className="font-serif italic text-4xl text-on-surface">{t('articles.title')}</h2>
+            <Link href={`/${locale}/articles`} className="font-mono text-xs uppercase tracking-widest text-primary border-b border-primary">
+              {t('articles.link')}
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-1 bg-surface-container">
-            <Link href={`/${locale}/writing`} className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500">
-              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">Incoming</span>
-              <h4 className="font-serif text-xl leading-snug text-on-surface group-hover:text-on-primary">{t('writing.post1')}</h4>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-auto text-primary group-hover:text-on-primary group-hover:translate-x-2 transition-transform">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
-            <Link href={`/${locale}/writing`} className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500">
-              <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">Incoming</span>
-              <h4 className="font-serif text-xl leading-snug text-on-surface group-hover:text-on-primary">{t('writing.post2')}</h4>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-auto text-primary group-hover:text-on-primary group-hover:translate-x-2 transition-transform">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
-            </Link>
-          </div>
+          {articles.length === 0 ? (
+            <div className="border border-outline-variant/30 bg-surface-container-lowest p-16 text-center">
+              <p className="text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+                {tArticles('empty')}
+              </p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1 bg-surface-container">
+              {articles.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/${locale}/articles/${article.slug}`}
+                  className="bg-surface-container-lowest p-8 h-80 flex flex-col justify-between hover:bg-primary group transition-all duration-500"
+                >
+                  <span className="font-mono text-[10px] tracking-widest uppercase text-outline group-hover:text-on-primary/60">
+                    {new Intl.DateTimeFormat(locale === 'pt' ? 'pt-BR' : 'en-US', {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                    }).format(new Date(article.date))}
+                  </span>
+                  <h4 className="font-serif text-xl leading-snug text-on-surface group-hover:text-on-primary">
+                    {article.title}
+                  </h4>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-auto text-primary group-hover:text-on-primary group-hover:translate-x-2 transition-transform">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

@@ -115,7 +115,7 @@ export default async function RootLayout({
   const navItems = [
     { href: '/projects', label: t('projects') },
     { href: '/journey', label: t('journey') },
-    { href: '/writing', label: t('writing') },
+    { href: '/articles', label: t('articles') },
     { href: '/services', label: t('services') },
   ];
 

@@ -27,10 +27,12 @@ test.describe('Localization', () => {
     await expect(page.getByRole('heading', { name: /Serviços/i })).toBeVisible();
   });
 
-  test('serves localized content for direct navigation to /pt/writing', async ({ page }) => {
-    await page.goto('/pt/writing');
-    await expect(page.getByRole('heading', { name: /Textos & Notas/i })).toBeVisible();
-    await expect(page.getByText(/Os primeiros ensaios estão sendo compilados/i)).toBeVisible();
+  test('serves localized content for direct navigation to /pt/articles', async ({ page }) => {
+    await page.goto('/pt/articles');
+    await expect(page.getByRole('heading', { name: /^Artigos$/i })).toBeVisible();
+    await expect(
+      page.getByText(/Ensaios, experimentos, reflexões e notas técnicas/i),
+    ).toBeVisible();
   });
 });
 
