@@ -1,0 +1,177 @@
+---
+title: "My First Real CTF: BSidesSP Online Qualifier"
+description: "My experience with my first real CTF competition. How I found a team, how the competition went, and what I learned from it."
+date: "2026-05-7"
+---
+
+Last week, I participated in the online phase of the BSidesSP CTF.
+
+It was my first real CTF competition. I had solved some beginner challenges on picoCTF before, but this was different. This was a real competition, with teams, rankings, qualification for an in-person final, and people who actually study and work with cybersecurity.
+
+The experience was intense, chaotic, and extremely valuable.
+
+Before the CTF even started, the first challenge was not technical. It was finding a team.
+
+Each team could have up to four members, and I wanted to participate with a group. I started by messaging people I already knew who had skills that could help in a CTF. Most of them could not participate. They were busy, did not have time, or were not available for the event. Only one person accepted.
+
+That was just the beginning.
+
+I still needed two more people, so I started looking elsewhere. I sent messages in a coworking group, but no one replied. Then I went to LinkedIn and started searching for people with cybersecurity, CTF, or hacking experience.
+
+I sent connection requests and invitations to many people. Probably more than 50.
+
+Most people did not reply. Some said they would like to participate but could not because they were busy. Some were interested, but unavailable. After many messages, I found one person who accepted and joined the team.
+
+Later, I asked the team if they knew someone else who could participate. One teammate recommended another person. We talked, I checked his profile, and he joined too.
+
+At that point, we had four members.
+
+The team was complete. We were ready.
+
+Then, just a few hours before the CTF started, everything broke.
+
+One of the people who had recently joined said he would not be able to participate anymore. He left the team. Shortly after that, another person also said he was busy and would not participate.
+
+We went from four people to two.
+
+For a moment, it felt like everything was lost. We had half of the team, the CTF was about to start, and the plan had collapsed.
+
+But I had already experienced similar situations in hackathons. I had participated alone before. I had dealt with teams falling apart. I had already learned that in competitions, things rarely go exactly as planned.
+
+So I went back to the people I had previously told that the team was full and explained that we had a spot again.
+
+Very quickly, I found another teammate.
+
+We started the CTF with three people.
+
+When the competition began, I was not fully ready. I had to eat, organize myself, and understand the platform. When I came back, one of my teammates, Daisy, had already solved some challenges and submitted flags.
+
+Then it was my turn to start.
+
+And it was harder than I expected.
+
+I did not have strong CTF experience. I did not have deep cybersecurity knowledge. I knew how to build software, use AI tools, work with agents, and move fast in hackathon environments. But CTFs are different. They require a specific type of technical intuition.
+
+You need to understand how to inspect binaries, analyze network traffic, break web applications, think adversarially, and recognize patterns that are invisible to beginners.
+
+I was trying hard, but I could not solve much by myself.
+
+During the competition, another person I had contacted on LinkedIn messaged me. She had started solving the challenges on her own and was very engaged. She had already solved many of them. We talked about the possibility of joining forces.
+
+At first, I felt uncomfortable with the idea, because she had already made a lot of progress. I did not want to simply benefit from someone else’s work. But after talking with her and with my team, we decided to reorganize and continue together in a clean way, solving the challenges again under the new team setup.
+
+That changed the dynamic.
+
+Now we had a stronger team and more momentum.
+
+At the same time, I started to understand my own role in the competition.
+
+I was not the most experienced cybersecurity person on the team. But I had one advantage: I knew how to use AI tools and agents very effectively.
+
+I had been participating in hackathons, studying AI, and experimenting with agentic workflows for a long time. I knew how to give context, how to split tasks, how to use CLI agents, how to save progress, how to restart from a fresh context window, and how to guide tools through complex work.
+
+That became my leverage.
+
+At first, I tried using Codex and CLI agents for everything. But I quickly ran into limits. Codex had usage limits, and the CTF required many attempts, many iterations, and a lot of debugging.
+
+Then I noticed something important: reverse engineering challenges were different from web challenges.
+
+For web challenges, the agent often needed to make HTTP requests, inspect endpoints, interact with the application, test payloads, and use the terminal. CLI agents were useful there because they could operate directly in the environment.
+
+But for reverse engineering challenges, the work was more self-contained. The challenge usually came as a binary or a folder with files. The model could analyze the files, reason through the binary, run commands in a container, inspect outputs, and eventually recover the flag.
+
+So I started sending the reverse engineering challenges to ChatGPT.
+
+And it worked.
+
+ChatGPT solved several reverse engineering challenges. Once I realized that, I changed my strategy. I focused on using ChatGPT for reverse engineering and CLI agents for web challenges.
+
+That was the turning point.
+
+I solved the web challenges PeopleHub and Ledger Market using agents in the CLI. Later, more challenges appeared, including more reverse engineering, web, OSINT, packet analysis, and forensics challenges.
+
+Packet analysis and forensics were harder for me. Some of the challenges were designed in a very specific way, and I did not yet have enough experience to understand them quickly.
+
+So I focused on the areas where I could create the most impact: reverse engineering and web.
+
+For reverse engineering, I used ChatGPT heavily. For web, I used agents in the terminal. I started saving progress in Markdown files, documenting what had been tried, what failed, what worked, and what the next agent should do if the context window became too large.
+
+This workflow helped a lot.
+
+During the competition, our team was around 11th place with about 4,000 points. After I started applying this strategy more effectively, I began scoring much more.
+
+In total, I solved several reverse engineering challenges and multiple web challenges. I became the person on my team with the most points, even surpassing teammates who had much more cybersecurity experience than me.
+
+That was surprising.
+
+It was not because I suddenly became a cybersecurity expert. I did not.
+
+It was because I understood how to use AI agents as force multipliers.
+
+That was the biggest lesson of the competition for me.
+
+AI did not replace the need for cybersecurity knowledge. In fact, the competition showed me the opposite. It made my lack of knowledge very clear.
+
+Many times, the agent would produce output, but I needed to understand whether the direction made sense. I needed to know what to ask next. I needed to recognize when the model was hallucinating, repeating a wrong flag, or getting stuck in a useless path.
+
+When I did not understand the technical context, I became too dependent on the tool.
+
+That is dangerous.
+
+The best player is not the person who only has the most expensive AI subscription. The best player is the person who understands the domain deeply enough to guide the tools effectively.
+
+That is what I want to become.
+
+After the online phase, we qualified for the BSidesSP in-person final in São Paulo.
+
+That was a very strong result for my first real CTF.
+
+Later, I talked with the organizers, and they mentioned something interesting: they are aware that many players are using AI to solve challenges. They are now designing challenges that are harder for AI agents to solve directly.
+
+I think this is a natural evolution.
+
+AI tools are becoming more capable. Players are using them. Organizers are adapting. The challenges are becoming harder. The game is changing.
+
+I do not think the solution is to pretend AI does not exist. It exists, and it will keep improving. The real challenge is learning how to use it properly while also building real technical skill.
+
+For me, the lesson is clear.
+
+I need to become better at cybersecurity.
+
+I need to understand web vulnerabilities more deeply. I need to study reverse engineering. I need to learn packet analysis, forensics, OSINT, and exploitation. I need to understand what the agents are doing instead of blindly trusting them.
+
+At the same time, I do not want to stop using AI.
+
+AI is part of my competitive edge. It helped me solve challenges that I would not have solved alone. It allowed me to participate meaningfully in a field where I had very little experience.
+
+But now I need to move from “using agents to solve things for me” to “using agents as tools that I can direct with technical judgment.”
+
+For the final, my plan is to focus.
+
+I will not try to become good at every CTF category in a few days. That is unrealistic.
+
+Instead, I will focus on web challenges because I already have experience building web applications. I understand frontend, backend, APIs, deployment, and application logic. That gives me a better foundation for web security than for areas like forensics or packet analysis.
+
+I will also keep using AI for reverse engineering challenges, but with more structure. I want to save progress better, split tasks across agents, document attempts, and avoid wasting context. I also want to understand more of the process instead of just waiting for the flag.
+
+As a team, we also need to divide responsibilities better. I can focus on web and reverse engineering. Other teammates can focus on forensics, OSINT, packet analysis, or other areas where they are stronger.
+
+Good teamwork can make a major difference.
+
+This first CTF was mind-blowing for me.
+
+I discovered a new field. I discovered new tools. I discovered a new type of competition. I also discovered how much I still need to learn.
+
+But I also proved something to myself: even without being a cybersecurity expert, I can compete, adapt, learn fast, and create leverage with the tools I already understand.
+
+That is the part I value the most.
+
+This was my first real CTF, but it will not be my last.
+
+I am looking forward to the BSidesSP final in São Paulo.
+
+I know I will be competing against people with much more experience than me: senior professionals, bug bounty hunters, cybersecurity students, and people who have been doing this for years.
+
+I will study. I will use the tools. I will work with my team. I will learn as much as possible.
+
+I will do my best, that's the best I can do.
