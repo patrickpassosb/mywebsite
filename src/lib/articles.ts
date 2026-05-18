@@ -71,7 +71,7 @@ export async function getArticles(locale: Locale): Promise<ArticleSummary[]> {
   );
   return items
     .filter((item): item is ArticleSummary => item !== null)
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export async function getArticle(slug: string, locale: Locale): Promise<ArticleSource | null> {
