@@ -1,7 +1,113 @@
 ---
-title: "CTF BSidesSP Final"
-description: ""
+title: "CTF BSidesSP Final 2026"
+description: "A personal account of the BsidesSP 2026 CTF Final, where Dinosaurs Team 2 competed with two active members, one First Blood, heavy AI usage, and a lot of lessons about cybersecurity, preparation, and team reliability."
 date: "2026-05-16"
 ---
 
-Coming soon...
+**Estimated reading time:** 9–11 minutes
+
+## From qualification to uncertainty
+
+The BsidesSP 2026 CTF Final was one of the most chaotic and demanding competitive experiences I have had so far. It was my first real CTF final, and although I had already participated in hackathons, programming competitions, and online cybersecurity challenges, this event felt different from the beginning because the pressure, the environment, the team dynamics, and the technical depth were all much more intense than I expected.
+
+Everything started after the online qualifier, when our team, **Dinosaurs Team 2**, qualified for the final. That should have been the moment when the team became more aligned and focused, but the first warning sign appeared almost immediately during a call with the organizers and the team, when one member did not show up. At the time, it looked like a small issue, but later it became clear that this was an early signal of a bigger problem: we had qualified as a team, but we were not functioning like one.
+
+During the week before the final, I tried to organize the team as much as possible. I shared the tools I was using, explained how I was approaching CTF problems with AI agents, and offered to help the others train, practice, and get more comfortable with the workflow. Julia also shared some of her tools, and we started dividing responsibilities based on the challenge categories from the online phase, with me focusing mainly on Web and Reverse Engineering while Julia focused more on OSINT and Forensics.
+
+The plan looked reasonable on paper, but the team engagement was weak. One teammate from Bahia had already said she might not be able to attend because of ticket costs, and later she confirmed that she could not go. Another member simply stopped answering. By the time the final arrived, it was clear that the active team would effectively be only Julia and me.
+
+## Arriving at the final
+
+On the day of the event, Julia and I tried to meet before arriving, but we were both late and ended up going separately. I arrived with only a few minutes before the CTF started, made my check-in, entered the room, and immediately had to find where my team was seated. Since Julia and I had never met in person before, I did not know exactly who I was looking for, so I asked a staff member where Dinosaurs Team 2 was sitting and then confirmed that the person at the table was Julia.
+
+![Julia working at the table during the final](/articles/ctf-bsides-final/julia.jpeg)
+
+That moment already showed me how different a CTF final is from a hackathon. In hackathons, people usually move around freely, sit wherever they want, talk with other teams, build prototypes, and collaborate in a much more open way. In a CTF final, the environment felt closer to an exam: assigned seating, staff monitoring the room, limited movement, and a strong awareness that if another team saw your flag, they could copy it and get the points.
+
+![The CTF room under assigned seating, showing how controlled the final felt](/articles/ctf-bsides-final/both.png)
+
+Even going to the bathroom required asking the staff, which made the event feel even more controlled. I understand why this structure exists, because CTFs depend on competitive integrity and flag secrecy, but it was still a very different atmosphere from what I was used to. Another constraint was internet access: there was no event internet available for us, so I had to rely on my mobile hotspot, while some teams came much more prepared and even brought their own Starlink connection.
+
+I organized my laptop, mouse, browser tabs, AI tools, and the Hack In Cariri platform as quickly as possible. I opened OpenCode, Codex, ChatGPT, and the custom CTF workflow I had been building to help AI agents reason through challenges. Julia and I briefly aligned our responsibilities again, with me prioritizing Web and Reverse Engineering, while she focused on OSINT and Forensics.
+
+## Competing as two people against teams of four
+
+When the CTF started, the imbalance was obvious. We were two active people competing against teams that had four members, more preparation, and, in many cases, more CTF experience. Behind us, I noticed another team using what looked like Claude Code even before the competition started, which immediately made me think that the competition would not be easy, because other teams were also using AI seriously and probably had more mature workflows than ours.
+
+Still, we started well. I went directly into the Web challenges and focused on finding an early flag, because I knew that **First Blood** could be strategically important. In CTFs, First Blood means being the first team to solve a challenge, and depending on the scoring system, this can create a meaningful advantage over teams that solve the same number of challenges later.
+
+One of the first challenges I attacked was **PCP Stealer**. I used Codex in fast mode together with the custom CTF skill I had created, and the agent was able to identify the right path quickly enough for us to submit the flag before everyone else. That gave us our First Blood, placed us high in the ranking early in the event, and gave both of us a strong boost of motivation.
+
+That moment mattered more than the points alone. For a short period, we were not thinking about being outnumbered or underprepared; we were thinking that we could compete. Getting an early First Blood showed that our workflow had potential, especially when AI agents were combined with fast decision-making and enough technical understanding to validate what they were doing.
+
+## Building an AI-assisted CTF workflow under pressure
+
+My approach during the final was very open and intentional: I used AI agents heavily. I did not treat ChatGPT, Codex, or OpenCode as magic tools that would simply solve everything, but as force multipliers that could inspect files, generate hypotheses, explain unfamiliar behavior, write scripts, test payloads, and help me move faster through unfamiliar technical territory.
+
+The most important part of the workflow was not just prompting an AI model once. The real leverage came from using agents iteratively, saving progress in Markdown files, creating checkpoints, and transferring context when a conversation became too long or too confused. For harder challenges, I would let one agent explore the problem, document what it found, summarize the failed attempts, and then start a new agent with a cleaner context window.
+
+This became especially useful in Reverse Engineering. In the online qualifier, some reverse challenges were simple enough that I could send the binary to ChatGPT and get the flag. In the final, that was no longer enough, because the challenges required more tooling, more validation, and more structured reasoning across multiple attempts.
+
+The final forced me to treat AI-assisted cybersecurity less like “ask the model for the answer” and more like building a temporary research pipeline. The agent could accelerate exploration, but I still needed to decide which direction made sense, when to abandon a path, when to use a different tool, and when a proposed flag or exploit was probably wrong. This was one of the clearest lessons from the competition: AI can increase speed, but it does not remove the need for technical judgment.
+
+![Working through the event with OpenCode at the table](/articles/ctf-bsides-final/opencode.jpeg)
+
+## When the difficulty increased
+
+As the event progressed, the challenges became much harder than what I had experienced in the online phase. Some challenges felt intentionally resistant to shallow AI usage, with less obvious paths, more ambiguity, and constraints that required real understanding instead of just automated pattern matching. This made the event more interesting, but also much more exhausting.
+
+I worked through Web and Reverse Engineering challenges such as **MayH3m Void**, **PCP Stealer**, **Industrial Insight App**, **Debug Left Behind by Azion**, **Dark Souls Monsters**, and **Canga Motors**, while Julia continued working through OSINT and other categories. Some challenges moved quickly, but others consumed hours without producing a flag, which is one of the most psychologically difficult parts of a CTF.
+
+One of the OSINT challenges, **Sincronia do Cangaço**, became a major bottleneck. For a while, almost nobody seemed able to solve it, and the organizers eventually provided more context so teams could make progress. After that, Julia was able to solve it as well, which gave us important additional points at a time when every solved challenge mattered.
+
+There were also infrastructure issues during the event. Some challenges stopped working correctly, which created additional uncertainty because it became harder to know whether we were stuck because of our own reasoning or because something outside our control was failing. In a competition where timing matters, that kind of uncertainty adds pressure because every minute spent debugging the wrong thing is a minute lost against other teams.
+
+## One more flag
+
+Near the end of the final, we had solved several challenges, earned one First Blood, and reached **1,660 points**. We were still trying to solve more challenges, but the remaining ones were difficult and only a few teams were managing to make progress. Julia kept working, I kept pushing with the agents, and we tried to extract one more flag before time ran out.
+
+That one additional flag would have changed everything. Many of the remaining challenges were worth at least 300 points, and with one more solve we could have moved much higher in the ranking. Instead, we finished in **5th place**, with 1,660 points and one First Blood.
+
+![Final ranking showing Dinosaurs Team 2 in fifth place with 1,660 points](/articles/ctf-bsides-final/2026-05-16_19-01.png)
+
+The result was frustrating, but not because it was bad. For a first real CTF final, competing mostly as two people against stronger and more experienced teams, 5th place was a meaningful result. The frustration came from how close the podium felt, because the difference between where we finished and where we could have finished was not an abstract gap; it was one more solved challenge.
+
+## The teams around us
+
+The team behind us was **Duckware**, and they ended up winning the event with three First Bloods. After the competition, I learned that they had also participated the previous year and placed 5th, which was exactly where we finished this time. Seeing them celebrate, including one member becoming emotional, made the result feel more concrete because it showed what persistence over time can produce.
+
+Another detail that stood out to me was that one member connected to their group could not officially compete with them because of the team size limit, so he played separately and still placed in third. That made the level of competition clear. We were not just competing against random teams; we were competing against people who had trained, returned, improved, and built stronger systems around themselves.
+
+I also asked them about AI usage, and they confirmed they had used tools like Claude Code to help during the competition. That mattered to me because it validated something I had already felt during the event: AI was not a shortcut that only inexperienced people were using, but part of the competitive workflow for strong teams as well. The difference was not whether a team used AI, but how mature their process was around it.
+
+## Why we did not win
+
+Looking back, the reasons we did not win are clear. The first reason was team capacity, because Julia and I were effectively competing as two active members while the top teams had more people working in parallel. In CTFs, parallelism matters because Web, Reverse Engineering, OSINT, Game, AI, and Misc challenges can all require different knowledge and different tools at the same time.
+
+The second reason was experience. This was my first real CTF final, and I had only started taking cybersecurity and CTF training seriously a few weeks earlier. I had been practicing on PicoCTF and using AI agents to accelerate my learning, but that is not the same as having a year or more of focused CTF experience.
+
+The third reason was preparation. Some teams came with stronger infrastructure, better role distribution, more mature AI workflows, and probably more specific training for this kind of event. I had a workflow that worked, but it was still new, still improvised in some places, and still dependent on my ability to manage the agents under pressure.
+
+The fourth reason was team reliability. We qualified as a team, but when the final arrived, not everyone showed up, not everyone communicated clearly, and not everyone engaged with the preparation process. That created a structural disadvantage before the competition even began.
+
+## What I learned
+
+The biggest lesson from the BsidesSP 2026 CTF Final is that competitive cybersecurity rewards preparation much more than improvisation. Being smart helps, moving fast helps, and AI agents help a lot, but none of that replaces training, category-specific knowledge, reliable teammates, and a workflow that has already been tested under pressure.
+
+I also learned that AI-assisted cybersecurity is not about replacing technical skill. It is about increasing the number of hypotheses you can test, compressing the time needed to understand unfamiliar artifacts, and making it easier to preserve context across long investigations. The better your fundamentals are, the more useful the agents become.
+
+The event also changed how I think about CTFs compared to hackathons. In a hackathon, the central challenge is often building something useful, presenting it well, and making product decisions under time pressure. In a CTF, the challenge is narrower but deeper: understand the system, find the weakness, extract the flag, and do it faster than other people who are trying to do the same thing.
+
+Most importantly, I learned that losing can be useful when the gap is visible. We were not destroyed by the competition; we were one challenge away from a much stronger result. That makes the loss easier to analyze, because the path forward is not vague. We need more preparation, more cybersecurity depth, more reliable team formation, and a better AI-assisted workflow.
+
+## What comes next
+
+After the final, Julia and I talked, took a picture at the train station, and left with the feeling that the experience had been difficult but worth it. For me, the event marked the beginning of a more serious CTF journey, because it showed me both where I am weak and where I have an advantage.
+
+![Julia and me at the train station after the final](/articles/ctf-bsides-final/20260516_193151.jpg)
+
+My next step is to train more deliberately. I had already been practicing on PicoCTF, but now I want to spend more time on TryHackMe because it has a leaderboard and gives me a visible way to measure progress over time. I want to improve in Web, Reverse Engineering, OSINT, networks, and general cybersecurity fundamentals, while continuing to refine how I use AI agents in this process.
+
+For future competitions, I also want to plan earlier. That means building the team months in advance, choosing people who are committed, training together before the event, defining responsibilities clearly, and testing the workflow before the competition starts. A CTF final is not the place to discover that the team is not aligned.
+
+The BsidesSP 2026 CTF Final was chaotic, technical, frustrating, and valuable. We finished 5th with 1,660 points and one First Blood, but the real result was understanding what competitive cybersecurity demands. This was my first real CTF final, but it will not be my last.
